@@ -1,0 +1,11 @@
+html, body{
+    padding: 0;
+    margin: 0;
+}
+.myButton {
+    transition: all 3s;
+}
+
+svg:hover .myButton {
+    fill: red;
+}
