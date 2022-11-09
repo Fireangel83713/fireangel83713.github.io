@@ -1,0 +1,46 @@
+/* 
+    Michael Jewett
+    November 09, 2022
+                        */
+
+body {
+    /* Targeting for body */
+    color: #333333;
+    font-size: 16px;
+    padding: 30px;
+}
+
+a {
+    /* Targeting for links */
+    color: crimson;
+}
+
+a:hover {
+    /* Targeting for mouse hover for links */
+    color: deeppink;
+}
+
+.intro {
+    /* Targeting for intro class */
+    font-size: 20px;
+    color: midnightblue;
+    padding: 20px 60px;
+    text-align: center;
+}
+
+.highlight {
+    background-color: lightgoldenrodyellow;
+    color: black;
+    padding: 5px;
+}
+
+.alert {
+    background: red;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.blue {
+background: blue;
+}
