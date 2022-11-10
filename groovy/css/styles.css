@@ -30,7 +30,6 @@ h3 {
 }
 
 .colors {
-
     color: red;
     font-weight: bold;
 }
@@ -45,7 +44,7 @@ h3 {
 }
 
 .backgrounds{
-
+    font-family: 'Trebuchet MS', sans-serif;
     color: green;
     font-size: 1.25em;
 }
