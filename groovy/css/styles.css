@@ -5,7 +5,7 @@
                         */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 1em;
     background-image: url("../image/abstractPic.jpg");
     background-size: cover;
@@ -18,7 +18,7 @@ h1 {
 
 h3 {
     font-size: 1.5em;
-    border-bottom: 1px, solid, black;
+    border: solid black 1px;
 }
 
 .fonts {
@@ -38,7 +38,7 @@ h3 {
 
     color: blue;
     text-decoration: underline;
-        border: 1px, dashed, gray;
+        border: 1px dashed gray;
         background-color: #D69BBE;
 
 }
