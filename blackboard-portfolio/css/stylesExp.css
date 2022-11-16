@@ -1,0 +1,42 @@
+/* css used to style experience.html */
+/*   display project examples        */
+
+    .pricing {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .pricebox {
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        float: left;
+        margin: 10px;
+        text-align: center;
+        width: 31%;
+    }
+
+    .pricebox h4.price {
+        background:#00008833; 
+        color: #FFFFFF;
+        padding: 15px;
+    }
+
+    .pricebox img {
+        margin-bottom: 20px;
+    }
+
+    .pricebox a.button {
+        display: block;
+        width: 40%;
+        margin: 10px auto;
+        color: #FFFFFF;
+        background: #00008833;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 15px;
+        padding: 1px;
+    }
+    footer {
+        clear: left;
+    }
