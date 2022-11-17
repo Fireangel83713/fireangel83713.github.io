@@ -155,9 +155,6 @@ table {
 th, td {
     padding:.25em .5em;
     text-align:left;
-    &:nth-child(2) {
-        text-align:right;
-    }
 }
     
 td {
