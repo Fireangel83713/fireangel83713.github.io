@@ -120,13 +120,13 @@
   display: block;
 }
 
-label {
+.aboutNav label {
     position: relative;
     cursor: pointer;
     color: aqua;
 }
 
-label:hover {
+.aboutNav label:hover {
     color: #12a4ed;
 }
 
