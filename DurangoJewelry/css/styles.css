@@ -35,7 +35,7 @@ img{
 }
 
 html {
-	background-image: url("../image/jewelry.jpg");
+	background-image: url(../image/jewelry.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
