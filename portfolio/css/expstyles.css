@@ -26,13 +26,13 @@ body{
 #fullPageDiv{
     height:800px;
     width: 100vw;
-    margin: auto;
+    margin:auto;
     display:flex;
     flex-direction:column;  
     align-items:center;
     padding: 20px;
-    min-height: 600px;
     max-width: 85%;
+    position: absolute;
 }
 
 #topper {
@@ -55,6 +55,8 @@ body{
 
 #we {
     padding-bottom: 0px;
+    padding-left: 90px;
+    padding-right: 90px;
 }
 
 #pe {
