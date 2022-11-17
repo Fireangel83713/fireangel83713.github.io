@@ -1,0 +1,91 @@
+/* 
+    Michael Jewett
+    November 16, 2022
+                        */
+
+#main_container {
+    text-align: center;
+    clear: left;
+    width:700px;
+    height: 575px;
+    margin-top:5px;
+    background: aliceblue;
+}
+
+#we {
+    padding-bottom: 0px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+#pe {
+    padding-bottom: 0px;
+}
+
+.ce {
+    clear: left;
+    width: 700px;
+    display:flex;
+    flex-direction:row;  
+    justify-content: center;
+}
+
+#ex1{
+    clear: left;
+    width: 175px;
+    height: 175px;
+    margin: 10px;
+    background-image: url("../image/gemfyre.jpg");
+    background-size: cover;
+}
+
+#ex2{
+    clear: left;
+    width: 175px;
+    height: 175px;
+    margin: 10px;
+    background-image: url("../image/soth.jpg");
+    background-size: cover;
+}
+
+#ex3{
+    clear: left;
+    width: 175px;
+    height: 175px;
+    margin: 10px;
+    background-image: url("../image/westernmallpersonalassistants.jpg");
+    background-size: cover;
+}
+
+.pe ul {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    text-align:center;
+    padding-top: 10px;
+}
+
+.xpList ul {
+    margin: 0;
+    padding: 0;
+}
+
+.xpList li {
+    margin: 0;
+    padding: 2px;
+    list-style-type: none;
+    text-align: center;
+}
+
+.ce a.button{
+    display: block;
+    width: 30%;
+    margin: 70px auto;
+    color:azure;
+    background: #0088a9;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 15px;
+    padding:5px;
+}

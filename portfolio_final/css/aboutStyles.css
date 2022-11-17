@@ -1,0 +1,111 @@
+#topTitle {
+    clear: left;
+    float: left;
+    height: 50px;
+    width: 700px;
+    margin-top: 10px;
+}
+
+#main_container {
+    text-align: center;
+    clear: left;
+    float: left;
+    width:700px;
+    height: 600px;
+    margin-top: 10px;
+    background: aliceblue;
+    flex-direction:column;
+    padding-top: 30px;  
+}
+
+
+.aboutNav {
+    list-style: None;
+    text-align:center;
+}
+
+.aboutNav li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+#topTitle.aboutNav li a {
+    font-weight: bold;
+    font-size:16px;
+    color: #15aaf4;
+    text-decoration:None;
+    transition: all 0.3s ease 0s;
+}
+
+.aboutNav li a:hover {
+    color: #0088a9;
+}
+
+.am {
+    width: 700px;
+}
+
+.mp {
+    width: 700px;
+}
+
+.mv {
+    width: 700px;
+}
+
+.ms {
+    width: 700px;
+}
+
+/* In-Page Menu */
+/* aboutBody1 - About me */
+.am
+{
+    display:none;
+}
+
+.mp
+{
+    display:none;
+}
+
+.mv
+{
+    display:none;
+}
+
+.ms
+{
+    display:none;
+}
+
+#box1:checked ~ .am
+{
+  display: block;
+}
+
+#box2:checked ~ .mp
+{
+  display: block;
+}
+
+#box3:checked ~ .mv
+{
+  display: block;
+}
+
+#box4:checked ~ .ms
+{
+  display: block;
+}
+
+label {
+    position: relative;
+    cursor: pointer;
+}
+
+/*hide the radio circles*/
+input[type="radio"] {
+    left: -999em;
+    position: absolute;
+}
