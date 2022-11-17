@@ -30,6 +30,8 @@ body{
     flex-direction:column;  
     align-items:center;
     padding: 20px;
+    min-width: 715px;
+    min-height: 800px;
 }
 
 #topper {
