@@ -1,3 +1,8 @@
+/* 
+    Michael Jewett
+    November 16, 2022
+                        */
+
 @font-face {
     font-family: 'amaranth';
     src: url('../fonts/amaranth-regular-webfont.woff') format('woff'),
@@ -84,6 +89,8 @@ body{
     width: 175px;
     height: 175px;
     margin: 10px;
+    background-image: url("../image/westernmallpersonalassistants.jpg");
+    background-size: cover;
 }
 
 #footerbottom {
@@ -160,14 +167,13 @@ h2{
 
 .ce a.button{
     display: block;
-    width: 40%;
-    margin: 10px auto;
+    width: 30%;
+    margin: 70px auto;
     color:azure;
     background: #0088a9;
     text-align: center;
     font-weight: bold;
     text-decoration: none;
     border-radius: 15px;
-    padding:10px;
-
+    padding:5px;
 }
