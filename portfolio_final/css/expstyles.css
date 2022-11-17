@@ -1,6 +1,6 @@
 /* 
     Michael Jewett
-    November 16, 2022
+    November 17, 2022
                         */
 
 #main_container {
@@ -35,7 +35,7 @@
     width: 175px;
     height: 175px;
     margin: 10px;
-    background-image: url("../image/gemfyre.jpg");
+    background-image: url(../image/gemfyre.jpg);
     background-size: cover;
 }
 
@@ -44,7 +44,7 @@
     width: 175px;
     height: 175px;
     margin: 10px;
-    background-image: url("../image/soth.jpg");
+    background-image: url(../image/soth.jpg);
     background-size: cover;
 }
 
@@ -53,7 +53,7 @@
     width: 175px;
     height: 175px;
     margin: 10px;
-    background-image: url("../image/westernmallpersonalassistants.jpg");
+    background-image: url(../image/westernmallpersonalassistants.jpg);
     background-size: cover;
 }
 
