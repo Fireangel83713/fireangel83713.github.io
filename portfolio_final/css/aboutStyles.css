@@ -33,7 +33,7 @@
 }
 
 .passion {
-    /* Targeting for intro class */
+    /* Targeting for passion class */
     font-size: 20px;
     color: midnightblue;
     padding: 80px 60px;
@@ -41,7 +41,7 @@
 }
 
 .vision {
-    /* Targeting for intro class */
+    /* Targeting for vision class */
     font-size: 20px;
     color: midnightblue;
     padding: 80px 60px;
@@ -56,18 +56,6 @@
 .aboutNav li {
     display: inline-block;
     padding: 0px 10px;
-}
-
-#topTitle.aboutNav li a {
-    font-weight: bold;
-    font-size:16px;
-    color: #15aaf4;
-    text-decoration:None;
-    transition: all 0.3s ease 0s;
-}
-
-.aboutNav li a:hover {
-    color: #0088a9;
 }
 
 .am {
@@ -135,6 +123,11 @@
 label {
     position: relative;
     cursor: pointer;
+    color: aqua;
+}
+
+label:hover {
+    color: #12a4ed;
 }
 
 /*hide the radio circles*/
@@ -152,6 +145,7 @@ table {
     font-family:sans-serif;
     justify-content: center;
 }
+
 th, td {
     padding:.25em .5em;
     text-align:left;
