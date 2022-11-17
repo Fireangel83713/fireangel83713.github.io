@@ -1,0 +1,87 @@
+
+/* 
+	Michael Jewett
+	November 17, 2022
+						 */
+
+@font-face {
+	font-family: 'amaranth';
+	src: url('../fonts/amaranth-regular-webfont.woff') format('woff'),
+		 url('../fonts/amaranth-regular-webfont.woff2') format('woff2'),
+		 url('../fonts/amaranth-bold-webfont.woff') format('woff'),
+		 url('../fonts/amaranth-bold-webfont.woff2') format('woff2'),
+		 url('../fonts/amaranth-italic-webfont.woff') format('woff'),
+		 url('../fonts/amaranth-italic-webfont.woff') format('woff2');
+	font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pacificoregular';
+    src: url('../fonts/pacifico-regular-webfont.woff2') format('woff2'),
+         url('../fonts/pacifico-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.addrightmargin {
+	margin-right: 10%;
+}
+
+img{
+	float: left;
+	border-radius: 50%;
+}
+
+html {
+	background-image: url("/image/jewelry.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}	
+
+h1 {
+	font-family: 'pacificoregular', cursive, serif;
+	font-size: 4.5em;
+	padding-top: 15px;
+}
+
+h2 {
+	font-family: 'amaranth', "Time new roman", serif;
+	font-style: italic;
+	font-size: 2em;
+}
+
+main {
+	background-image: linear-gradient(#FFFFFF, #F0F9E6);
+	padding: 10px;
+	margin: 20px;
+	border-radius: 2em;
+	font-size: 1.2em;
+
+}
+
+ul {
+	list-style-type: none;
+	font-size: 1.5em;
+}
+
+nav {
+	clear: left;
+}
+
+footer {
+	font-size: 1em;
+	text-align: center;
+	padding: 10px;
+}
+
+#outerwrapper {	
+	background: rgba(243,205,170, 0.4);
+    position: relative;
+    border-radius: 15%;
+    width:70%;
+}
+
+
