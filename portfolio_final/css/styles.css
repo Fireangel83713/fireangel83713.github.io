@@ -34,7 +34,7 @@ h2{
 }
 
 #fullPageDiv{
-    height:800px;
+    height:830px;
     width: 100vw;
     margin:auto;
     display:flex;
@@ -54,6 +54,15 @@ h2{
     background-image: url(../image/circuitboard.jpg);
 }
 
+#main_container {
+    text-align: center;
+    clear: left;
+    width:700px;
+    height: 575px;
+    margin-top:5px;
+    background: aliceblue;
+}
+
 body {
     font-family: 'amaranth', "Times New Roman", serif;
 }
@@ -65,6 +74,10 @@ body {
     width:200px;
     height:500px;
     color: rgb(16, 96, 109);
+}
+
+nav {
+    background: rgba(20, 23, 170, 0.4);
 }
 
 .nav__links {
@@ -89,11 +102,45 @@ body {
     color: #0088a9;
 }
 
+#scaling{
+    display: block;
+    transform: scale(.8)
+}
+
 #footerbottom {
-    clear: left;
+    line-height: 60px;
+    flex-direction:column;  
     text-align: center;
     margin-top:10px;
-    padding: 10px;
-    width: 680px;
-    height: 20px;
+    width: 700px;
+    height: 85px;
+    position: relative;
+}
+
+#emailParagraph {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#textMe {
+    width: 80%;
+    height:50px;
+    resize: none;
+}
+
+#contactInfo {
+    border-radius: 15px;
+    padding: 0px;
+}
+
+#messageSection {
+    border-radius: 15px;
+    padding: 0px;
+}
+
+.btn {
+    margin: 10px;
+}
+
+#email-address {
+    margin-bottom: 10px;
 }
