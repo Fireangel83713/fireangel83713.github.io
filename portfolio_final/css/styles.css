@@ -144,18 +144,27 @@ nav {
     min-height: 100vh;
     display: grid;
     place-items: center;
-    font-family: "Balsamiq Sans", cursive;
+    font-family:'Balsamiq Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', cursive, Verdana, sans-serif ;
     color: var(--clr-neon);
 }
 
 #mainPage2 {
-    clear: left;
-    float: left;
-    display: flex;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
     background: white;
     animation: createBox .25s;
-    width: 90%; height: 90%;
+    width: 60%; height: 50%;
+    align-items: center;
     background-image: url(../image/messagif.gif);
+    background-repeat: no-repeat;
+    background-size:cover;
+    border:#0088a9 solid;
+    border-radius: 15px;
   }
 
   @keyframes createBox {
@@ -166,6 +175,14 @@ nav {
       transform: scale(1);
     }
   }
+
+ #mainPage2 {
+    display: none;
+ } 
+
+ #mainPage2:target {
+    display:block;
+ }
 
 .neonbtn{
     font-size: 1rem;
