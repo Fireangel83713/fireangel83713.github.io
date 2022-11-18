@@ -44,14 +44,14 @@ h2{
 }
 
 #invisibleFormatter{
-    position: absolute;
+    width: 70%;
+    max-width: 750px;
     height: auto;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
 }
+
 #fullPageDiv{
     height:885px;
     max-width: 50%;
@@ -95,6 +95,9 @@ h2{
 
 body {
     font-family: 'amaranth', "Times New Roman", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .border {
