@@ -37,7 +37,7 @@
     0 0 0.5em 0 var(--clr-neon);
     position: relative;
     transition: background-color 100ms linear;
-    margin-top:90px;
+    margin-top:100px;
 }
 
 .neonbtn::before {
