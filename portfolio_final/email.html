@@ -12,76 +12,78 @@
         <link href="css/styles.css" rel="stylesheet" type="text/css">
     </head>
 <body>
-    <div id="fullPageDiv" class="border"> <!--Container for all divs-->
-        <div id="topper" class="border">
-            <header> <!--Top Menu-->
-                <h1>Michael Jewett</h1>
-                <nav>
-                    <ul class="nav__links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="experience.html">Experience</a></li>
-                        <li><a href="email.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-    <div id="main_container" class = "border"> <!--Begin main container-->
-    <main>
-        <h2>Send me an email</h2>
-        <div id="emailParagraph">
-            <p>Thank you so much for visiting my site! I genuinely appreciate you for taking the time to see who I am and what I am about. Filling out the form below will make it super easy to contact me. I look forward to hearing from you!</p>
-        </div>
+    <div id="invisibleFormatter">
+        <div id="fullPageDiv" class="border"> <!--Container for all divs-->
+            <div id="topper" class="border">
+                <header> <!--Top Menu-->
+                    <h1>Michael Jewett</h1>
+                    <nav>
+                        <ul class="nav__links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="experience.html">Experience</a></li>
+                            <li><a href="email.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+        <div id="main_container" class = "border"> <!--Begin main container-->
+        <main>
+            <h2>Send me an email</h2>
+            <div id="emailParagraph">
+                <p>Thank you so much for visiting my site! I genuinely appreciate you for taking the time to see who I am and what I am about. Filling out the form below will make it super easy to contact me. I look forward to hearing from you!</p>
+            </div>
 
-        <div id="emailForm">
-            <form action="mailto:michaeljewett@my.cwi.edu?subject=Personal%20Portfolio%20Mail" enctype="text/plain" method="POST">
-                <fieldset id="contactInfo">
-                <legend>Your Contact Information</legend>
-                    <div>
-                        <p><label for="company">Your organization:</label>
-                        <input size="50" type="text" name="compName" id="company" data-compName="compName" placeholder="Please enter the organization you represent" required></p>
-                    </div>
-                    <div>
-                        <p><label for="contactName">Your name:</label>
-                        <input size="30" type="text" name="contactName" id="contactName" placeholder="Contact Name" required></p>
-                    </div>
-                    <div>
-                        <label for="email_address">Your email address:</label>
-                        <input type="email" name="email_address" id="email-address" placeholder="Email Address" required>
-                    </div>
-                </fieldset>
-                    <br>
-                <fieldset id="messageSection">
-                    <legend>What opportunities are available at your company?</legend>
-                    <p><label for="employment">Type of Position</label>
-                    <select name="employment">
-                        <option value="Intern">Internship</option>
-                        <option value="Employee">Employment</option>
-                        <option value="Management">Management</option>
-                    </select></p>
-        
-                    <p>How did you find me?</p>
-                    <input type="radio" name="referrer" id="linkedin" value="linkedIn">
-                    <label for="linkedin">LinkedIn</label>
-                    <input type="radio" name="referrer" id="github" value="gitHub">
-                    <label for="github">GitHub</label>
-                    <div>
-                        <p><textarea id="textMe" name="comment" placeholder="Send me a message!"></textarea></p>
-                    </div>
-                    <input type="submit" id="submit" value="Submit" class="btn">
-                </fieldset>
-             </form>
-        </div>
-    </main>
-</div> <!--End main container-->
-    <footer  id="footerbottom" class="border"> <!--Start Footer-->
-        <div id="scaling">
-        <p><a href="https://github.com/Fireangel83713"><img src="image/github.png" alt="social icon for GitHub"></a>
-            <a href="https://www.linkedin.com/in/michael-jewett-aa9484104/"><img src="image/linkedin.png" alt="social icon for LinkedIn"></a></p>
-        </div>
-        <p>Copyright &copy; 2022. All Rights Reserved</p>
-    </footer> <!--End Footer-->
+            <div id="emailForm">
+                <form action="mailto:michaeljewett@my.cwi.edu?subject=Personal%20Portfolio%20Mail" enctype="text/plain" method="POST">
+                    <fieldset id="contactInfo">
+                    <legend>Your Contact Information</legend>
+                        <div>
+                            <p><label for="company">Your organization:</label>
+                            <input size="50" type="text" name="compName" id="company" data-compName="compName" placeholder="Please enter the organization you represent" required></p>
+                        </div>
+                        <div>
+                            <p><label for="contactName">Your name:</label>
+                            <input size="30" type="text" name="contactName" id="contactName" placeholder="Contact Name" required></p>
+                        </div>
+                        <div>
+                            <label for="email_address">Your email address:</label>
+                            <input type="email" name="email_address" id="email-address" placeholder="Email Address" required>
+                        </div>
+                    </fieldset>
+                        <br>
+                    <fieldset id="messageSection">
+                        <legend>What opportunities are available at your company?</legend>
+                        <p><label for="employment">Type of Position</label>
+                        <select name="employment">
+                            <option value="Intern">Internship</option>
+                            <option value="Employee">Employment</option>
+                            <option value="Management">Management</option>
+                        </select></p>
+            
+                        <p>How did you find me?</p>
+                        <input type="radio" name="referrer" id="linkedin" value="linkedIn">
+                        <label for="linkedin">LinkedIn</label>
+                        <input type="radio" name="referrer" id="github" value="gitHub">
+                        <label for="github">GitHub</label>
+                        <div>
+                            <p><textarea id="textMe" name="comment" placeholder="Send me a message!"></textarea></p>
+                        </div>
+                        <input type="submit" id="submit" value="Submit" class="btn">
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+    </div> <!--End main container-->
+        <footer  id="footerbottom" class="border"> <!--Start Footer-->
+            <div id="scaling">
+            <p><a href="https://github.com/Fireangel83713"><img src="image/github.png" alt="social icon for GitHub"></a>
+                <a href="https://www.linkedin.com/in/michael-jewett-aa9484104/"><img src="image/linkedin.png" alt="social icon for LinkedIn"></a></p>
+            </div>
+            <p>Copyright &copy; 2022. All Rights Reserved</p>
+        </footer> <!--End Footer-->
 
-</div> <!--End container for all divs-->
+    </div> <!--End container for all main divs-->
+    </div> <!--End invisible container for centering-->
 </body>
 </html>

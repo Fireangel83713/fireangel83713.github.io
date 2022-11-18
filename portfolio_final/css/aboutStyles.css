@@ -6,12 +6,12 @@
     margin-top: 10px;
 }
 
-#main_container {
+#main_container_about {
     text-align: center;
     clear: left;
     float: left;
     width:700px;
-    height: 600px;
+    height: 520px;
     margin-top: 10px;
     background: aliceblue;
     flex-direction:column;
