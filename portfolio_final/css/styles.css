@@ -29,8 +29,12 @@ html {
     background-size: cover;
     }
 
-    
+.google {
+        font-family: 'Sono', Verdana, sans-serif;
+}
+
 h1 {
+    font-family: 'Sono', ;
     color: aliceblue;
     text-align: center;
 }
@@ -133,9 +137,8 @@ background-color:rgb(171, 219, 232, 0.4);
 color: whitesmoke;
 }
 
-.topnav a.active {
-background-color:rgb(171, 219, 232, 0.2);
-color: rgb(10, 153, 41);
+.topnav a:active {
+    background-color:rgb(4, 151, 66);
 }
 
 .topnav-centered a {
