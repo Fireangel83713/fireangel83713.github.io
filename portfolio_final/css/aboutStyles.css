@@ -168,3 +168,35 @@ span {
 .am a {
     text-decoration: none;
 }
+
+.am a:link {
+    color: blue;
+}
+
+.am a:hover {
+    color: rgb(9, 223, 148);
+}
+
+.am a:visited {
+    color: palevioletred;
+}
+
+.am a:visited:hover {
+    color: rgb(109, 9, 223);
+}
+
+.mv a:link {
+    color: blue;
+}
+
+.mv a:hover {
+    color: rgb(9, 223, 148);
+}
+
+.mv a:visited {
+    color: palevioletred;
+}
+
+.mv a:visited:hover {
+    color: rgb(109, 9, 223);
+}
