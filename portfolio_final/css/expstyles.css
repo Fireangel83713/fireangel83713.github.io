@@ -15,8 +15,7 @@
     padding-bottom: 0px;
 }
 
-.ce {
-    clear: left;
+.ce { /* Parent container */
     width: 700px;
     display:flex;
     flex-direction:row;  
@@ -24,7 +23,6 @@
 }
 
 #ex1{
-    clear: left;
     width: 175px;
     height: 175px;
     margin: 10px;
@@ -33,7 +31,6 @@
 }
 
 #ex2{
-    clear: left;
     width: 175px;
     height: 175px;
     margin: 10px;
@@ -42,7 +39,6 @@
 }
 
 #ex3{
-    clear: left;
     width: 175px;
     height: 175px;
     margin: 10px;
