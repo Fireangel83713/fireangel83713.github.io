@@ -16,9 +16,9 @@
 }
 
 #contactInfo {
+    line-height: 2px;
     height: 150px;
     border-radius: 15px;
-    padding: 0px;
     box-shadow:0 0 1.5em 0 rgb(6, 77, 147, 0.5);
 }
 
