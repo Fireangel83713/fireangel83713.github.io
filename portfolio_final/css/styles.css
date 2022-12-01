@@ -34,7 +34,7 @@ html {
 }
 
 h1 {
-    font-family: 'Sono', ;
+    font-family: 'Sono', Verdana, Geneva, Tahoma, sans-serif;
     color: aliceblue;
     text-align: center;
 }
