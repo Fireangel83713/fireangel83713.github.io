@@ -270,7 +270,7 @@ transform: translate(-50%, -50%);
     display: flex;
     flex-direction: row;
     justify-content:left;
-    column-gap: 110px;
+    column-gap: 105px;
     padding-left: .8rem;
     padding-top: 5px;
 }
