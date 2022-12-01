@@ -68,7 +68,6 @@ h2{
 }
 
 #topper {
-    clear: left;
     padding-top: 10px;
     padding-bottom: 30px;
     width: 700px;
@@ -137,8 +136,8 @@ background-color:rgb(171, 219, 232, 0.4);
 color: whitesmoke;
 }
 
-.topnav a:active {
-    background-color:rgb(4, 151, 66);
+.topnav a.active {
+    background-color:rgb(0, 79, 90);
 }
 
 .topnav-centered a {
@@ -265,4 +264,21 @@ transform: translate(-50%, -50%);
     height: 85px;
     padding-bottom: 5.2rem;
     position: relative;
+}
+
+.pageTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    column-gap: 130px;
+    padding-left: .8rem;
+    padding-top: 5px;
+}
+
+.logo {
+    max-height: 100px;
+    max-width: 100px;
+    border: #0088a9 solid 2px;
+    border-radius: 10px;
+    padding: 2px;
 }
