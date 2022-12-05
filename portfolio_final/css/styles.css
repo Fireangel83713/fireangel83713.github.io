@@ -21,6 +21,10 @@
     font-style: normal;
 }
 
+.google {
+    font-family: 'Sono', Verdana, sans-serif;
+}
+
 html { 
     background: linear-gradient(0deg, rgba(230,230,222,1) 0%, rgba(0,255,234,1) 24%, rgba(0,102,153,1) 51%, rgba(0,0,8,1) 89%) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -28,10 +32,6 @@ html {
     -o-background-size: cover;
     background-size: cover;
     }
-
-.google {
-        font-family: 'Sono', Verdana, sans-serif;
-}
 
 h1 {
     font-family: 'Sono', Verdana, Geneva, Tahoma, sans-serif;
