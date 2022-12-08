@@ -1,0 +1,57 @@
+<!-- 
+    Michael Jewett 
+    December 8, 2022
+                     -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Pacific Trails Resort - Reservations</title>
+<meta charset="utf-8">
+<link href="css/pacific.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<h1>Pacific Trails Resort</h1>
+</header>
+<nav>
+<ul>
+    <li><a href="index.html">Home</a></li> 
+    <li><a href="yurt.html">Yurts</a></li> 
+    <li><a href="activities.html">Activities</a></li> 
+    <li><a href="reservations.html">Reservations</a></li>
+</ul>
+</nav>
+<main>
+    <div id="booking">
+        <p>Please fill out the form below to allow us to schedule your visit. We look forward to assisting you!</p>
+        <form>
+            <form action="mailto:manager@pacifictrails.com?subject=Reservation%20Request" enctype="text/plain" method="POST"></form>
+            <div>
+                <label for="client">Name:</label>
+                <input size="30" type="text" name="clientName" id="client" data-compName="cName" placeholder="First and Last Name, ie Bob Smith" required>
+            </div>
+            <div>
+                <label for="client">Email:</label>
+                <input size="30" type="text" name="clientEmail" id="client" data-compName="cEmail" placeholder="someone@somewhere.com" required>
+            </div>
+            <div>
+                <label for="startingDate">Desired Date:</label>
+                <input type="date" id="startingDate" name="startingDate">
+            </div>
+            <div>
+                <label for="endingDate">End Date:</label>
+                <input type="date" id="endingDate" name="endingDate">
+            </div>
+            <div>
+                <button type="submit" id="sub">Book now!</button>
+            </div>
+        </form>
+    </div>
+</main>
+<footer>
+Copyright &copy; 2018 Pacific Trails Resort<br>
+<a href="mailto:manager@pacifictrails.com">manager@pacifictrails.com</a>
+</footer>
+</body>
+</html>
