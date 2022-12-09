@@ -57,7 +57,7 @@ h3
 
 ul
 { 
-	list-style-image:url("/image/marker.gif");
+	list-style-image:url("image/marker.gif");
 	margin: 0;
 } 
 
