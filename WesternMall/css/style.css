@@ -91,7 +91,7 @@
 }
 
 .mainBody {
-    background:url("/images/mainBack.jpg");
+    background:url("../images/mainBack.jpg");
     background-color: #070707; /* Used if the image is unavailable */
     height: 400px; /* You must set a specified height */
     background-position: center; /* Center the image */
@@ -249,7 +249,7 @@
     border-radius: 15px;
     padding: 1rem 1rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    background-image: url("/images/weaponMenu.jpg");
+    background-image: url("../images/weaponMenu.jpg");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size:cover; /* Resize the background image to cover the entire container */
@@ -268,7 +268,7 @@
     padding: 1rem 1rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     margin-left: 10px;
-    background-image: url("/images/gearMenu.jpg");
+    background-image: url("../images/gearMenu.jpg");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size:cover; /* Resize the background image to cover the entire container */
@@ -283,7 +283,7 @@
     padding: 1rem 1rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     margin-left: 10px;
-    background-image: url("/images/paMenu.jpg");
+    background-image: url("../images/paMenu.jpg");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size:cover; /* Resize the background image to cover the entire container */
