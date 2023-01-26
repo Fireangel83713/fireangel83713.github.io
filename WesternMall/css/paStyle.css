@@ -108,7 +108,18 @@ img {
       "productImage2 productDescription"
       "corpImage purchaseProduct";
 }
-  
+
+.paCatalogue {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.paCatalogue a {
+    text-decoration: none;
+}
+
 .productDescription { 
     grid-area: productDescription;
     margin-top: 100px;
