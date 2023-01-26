@@ -10,32 +10,73 @@
         <meta name="keywords" content="UX UI product software html html5 css CSS3">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/paStyle.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <header> <!--Top Menu-->
-            <div class="pageTitle">
-                <h1 id="mainHeader">Michael Jewett</h1>
-            </div>
-            <div class="topnav">
-
-                <!-- Centered link -->
-                <div class="topnav-centered">
-                    <a href="index.html" class="active">Home</a>
-                    <a href="Weapons.html">About</a>
-                    <a href="Gear.html">Experience</a>
-                    <a href="Requests.html">Contact</a>
-                </div>
-            </div>
-        </header>
-    <footer  id="footerbottom" class="border"> <!--Start Footer-->
-        <div id="scaling"> <!--Begin container for footer scaling-->
-        <p><a href="https://github.com/Fireangel83713" target="_blank"><img src="image/github.png" alt="social icon for GitHub"></a>
-            <a href="https://www.linkedin.com/in/michael-jewett-aa9484104/" target="_blank"><img src="image/linkedin.png" alt="social icon for LinkedIn"></a>
-            <a href="email.html"><img src="image/email.png" alt="social icon for LinkedIn"></a></p>
-        </div> <!--End container for footer scaling-->
-        <p>Copyright &copy; 2022. All Rights Reserved</p>
-    </footer> <!--End Footer-->
-            </div> <!--End full page div-->
-        </div> <!--end container for page formatting-->
+        <div class="flexContainer">
+            <header> <!--Top Menu-->
+                <section class="flexNav">
+                    <div class="wmBanner">
+                    </div>
+                        <!-- Menu centered and images provided with CSS -->
+                    <div class="topNav">
+                        <div id="homeImage">
+                            <a href="index.html" class="active">Home</a>
+                        </div>
+                        <div id="weaponImage">
+                            <a href="weapons.html">Arms</a>
+                        </div>
+                        <div id="gearImage">
+                            <a href="gear.html">Gear</a>
+                        </div>
+                        <div id="paImage">
+                            <a href="pas.html">PAs</a>
+                        </div>
+                    </div>
+                </section>
+            </header>
+        <div id="scrollingTextBanner">
+            <div id="scroll-text"><script src="/js/messagesScript.js"></script></div>
+        </div>
+        <!--Main body container for formatting page background-->
+        <section class="mainBody">
+            <!--Shop Menu Items, images provided by CSS-->
+            <section class="paShop">
+                <a href="pa1.html">
+                    <div id="pa1">
+                        <div class="paLink"><h2>lil' Buddy&#8482;</h2></div>
+                    </div>
+                </a>
+                <a href="pa2.html">
+                    <div id="pa2">
+                        <div class="paLink"><h2>TinHead&#8482;</h2></div>
+                    </div>
+                </a>
+                <a href="pa3.html">
+                    <div id="pa3">
+                        <div class="paLink"><h2>Synergy&#8482;</h2></div>
+                    </div>
+                </a>
+                <a href="pa4.html">
+                    <div id="pa4">
+                        <div class="paLink"><h2>I-Spy&#8482;</h2></div>
+                    </div>
+                </a>
+                <a href="pa5.html">
+                    <div id="pa5">
+                        <div class="paLink"><h2>Hal&#8482;</h2></div>
+                    </div>
+                </a>
+                <a href="pa6.html">
+                    <div id="pa6">
+                        <div class="paLink"><h2>Marvin&#8482;</h2></div>
+                    </div>
+                </a>
+            </section>
+        </section>
+        <footer id="footerbottom"> <!--Start Footer-->
+            <p>Copyright &copy; 2022. All Rights Reserved</p>
+        </footer> <!--End Footer-->
+    </div><!--End flexcontainer-->
     </body>
 </html>
