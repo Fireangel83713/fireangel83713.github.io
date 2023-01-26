@@ -111,8 +111,9 @@ img {
   
 .productDescription { 
     grid-area: productDescription;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-right: 50px;
+    padding-left: 50px;
 }
   
 .productImage1 { 
@@ -174,11 +175,25 @@ img {
       "reviewerImage imagePosted";
   }
   
-  .reviewerReview { grid-area: reviewerReview; }
+.reviewerReview { 
+    grid-area: reviewerReview; 
+    margin-right: 50px;
+    padding-left: 50px;
+}
   
   .imagePosted { grid-area: imagePosted; }
   
-  .reviewerImage { grid-area: reviewerImage; }
+  .reviewerImage { 
+    grid-area: reviewerImage; 
+    height: 190px;
+    width: 270px; 
+    margin-left: 50px;
+    align-items: center;
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:cover; /* Resize the background image to cover the entire container */
+}
   
   .reviews { grid-area: reviews; }
   
