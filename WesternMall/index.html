@@ -1,44 +1,78 @@
 <!DOCTYPE html>
-<!-- Michael Jewett
-    11/02/2022 -->
+<!-- 
+    Michael Jewett / Jan 23, 2023 
+
+    *** Change Log ***
+    Jan 23, 2023  ver.0.001 Coded site skeleton and initial css entries
+    Jan 24, 2023  ver.0.002 Started css from scratch. fixing many flex issues
+    Jan 25, 2023  ver.0.003 Added shop link hovers and properly centered the footer
+    Jan 26, 2023  ver.0.004 Added background gradient, westernmall graphic for the header, 
+                             and background images for the topnav menu
+    Jan 26, 2023  ver.0.005 Added pas.html for personal assistants, set paShop as flex, 
+                             added graphics, added a scrolling JavaScript banner to all pages
+    Jan 26, 2023  ver.0.006 Uploaded all graphics to be used in personal assistants to images,
+                             I am slowly changing each to fit within the css defined divs made 
+                             for them. I set the individual pa1 and pa2 pages to be set as grids
+                             via css.
+    Jan 26, 2023  ver.0.007 paShop changed to paCatalogue on pas.html to accommodate a grid
+                             layout for the available personal assistants, converted more images,
+                             added text descriptions and formated them via css
+    Jan 26, 2023  ver.0.008 
+    Jan 26, 2023  ver.0.009 
+    Jan 26, 2023  ver.0.010 Adjusted image urls to proper relative path formats                                
+    Jan 27, 2023  ver.0.011 Added media queries to adjust the site for phones and tablets
+    Jan 28, 2023  ver.0.012 Added more media queries and converted paStyle to responsive design 
+                            by adding media queries
+                            Converted header navigation to grid from flex for better layout and 
+                            better responsive design
+                            Updated meta data 
+-->
+
 <html lang="en">
     <head>
-        <title>WesternMall - welcome</title>
+        <title>WesternMall - Welcome</title>
         <meta name="author" content="Michael Jewett">
         <meta charset="UTF-8">
-        <meta name="description" content="Michael Jewett software app designer Boise Idaho home page">
-        <meta name="keywords" content="UX UI product software html html5 css CSS3">
+        <meta name="description" content="Western mall for eldrith earth rpg main page">
+        <meta name="keywords" content="rpg ttrpg fantasy scifi cyberpunk">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div class="flexContainer">
             <header> <!--Top Menu-->
-                <section class="flexNav">
-                    <div class="wmBanner">
-                    </div>
-                        <!-- Menu centered and images provided with CSS -->
-                    <div class="topNav">
-                        <div id="homeImage">
-                            <a href="index.html" class="active">Home</a>
+                    <div class="flexNav">
+                        <div class="bannerArea" id="bannerRow">
+                            <img id="titleBanner" src="images\wmBanner.png" alt="A grungy text displaying western mall">
+                            <img id="mobileBanner" src="images\wmBannerPort.png" alt="A grungy text displaying western mall">
                         </div>
-                        <div id="weaponImage">
-                            <a href="weapons.html">Arms</a>
+                        <div class="homeIcon" id="bannerRow">
+                            <div id="homeImage">
+                                <a href="index.html" class="active">Home</a>
+                            </div>
                         </div>
-                        <div id="gearImage">
-                            <a href="gear.html">Gear</a>
+                        <div class="armsIcon" id="bannerRow">
+                            <div id="weaponImage">
+                                <a href="weapons.html">Arms</a>
+                            </div>
                         </div>
-                        <div id="paImage">
-                            <a href="pas.html">PAs</a>
+                        <div class="gearIcon" id="bannerRow">
+                            <div id="gearImage">
+                                <a href="gear.html">Gear</a>
+                            </div>
                         </div>
-                    </div>
-                </section>
+                        <div class="paIcon" id="bannerRow">
+                            <div id="paImage">
+                                <a href="pas.html">PAs</a>
+                            </div>
+                        </div>
+                      </div>
             </header>
         <div id="scrollingTextBanner">
-            <div id="scroll-text"><script src="../js/messagesScript.js"></script></div>
+            <div id="scroll-text"><script src="js\messagesScript.js"></script></div>
         </div>
         <!--Main body container for formatting page background-->
-        <section class="mainBody">
+        <main class="mainBody">
             <!--Shop Menu Items, images provided by CSS-->
             <section class="shop">
                 <a href="weapons.html">
@@ -57,7 +91,7 @@
                     </div>
                 </a>
             </section>
-        </section>
+        </main>
         <footer id="footerbottom"> <!--Start Footer-->
             <p>Copyright &copy; 2022. All Rights Reserved</p>
         </footer> <!--End Footer-->

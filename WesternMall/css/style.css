@@ -5,6 +5,7 @@
 .flexContainer {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background: rgb(228,4,20);
     background: radial-gradient(circle, rgba(228,4,20,1) 0%, rgba(148,187,233,1) 100%);
 }
@@ -25,30 +26,78 @@
     text-shadow: .1ex .1ex darkred;
     -webkit-text-stroke: 1px black;
 }
+/* Main Navigation */
 
 .flexNav {
+    height: 215px;
+    display: grid;
+    overflow:hidden;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "bannerArea bannerArea bannerArea bannerArea"
+      "homeIcon armsIcon gearIcon paIcon";
     border: solid 3px black;
-    display: flex;
-    flex-direction: column;
     box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    word-spacing: 25px;
-    line-height: 4.5em;
-    padding-bottom: 10px;
 }
 
-.wmBanner {
-    height: 150px;
+.flexNav a {
+    color: red;
+    font-family: 'Audiowide', cursive, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 5;
+}
+
+.flexNav a:hover {
+    -webkit-text-stroke: 1px black;
+}
+
+.bannerArea {
+    height: 95px;
+    grid-area: bannerArea; 
+}
+  
+.homeIcon { 
+    grid-area: homeIcon;
+    align-self: center;
+    text-align: center; 
+}
+  
+.armsIcon { 
+    grid-area: armsIcon; 
+    align-self: center;
+    text-align: center; 
+}
+  
+.gearIcon { 
+    grid-area: gearIcon; 
+    align-self: center;
+    text-align: center; 
+}
+  
+.paIcon { 
+    grid-area: paIcon; 
+    align-self: center;
+    text-align: center; 
+}
+
+#bannerRow {
+    height: 100px;
+}
+
+#titleBanner {
+    height: 75px;
     width:100%;
-    background-image: url("../images/wmBanner.png");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size:auto; /* Resize the background image to cover the entire container */
 }
 
-.topNav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+#mobileBanner {
+    display: none;
 }
 
 #homeImage {
@@ -115,18 +164,6 @@
     background-size:contain; /* Resize the background image to cover the entire container */
 }
 
-.flexNav a {
-    color: red;
-    font-family: 'Audiowide', cursive, 'Times New Roman', Times, serif;
-    font-size: 2em;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.flexNav a:hover {
-    -webkit-text-stroke: 1px black;
-}
-
 #scrollingTextBanner {
     height: 32px;
     width:55%;
@@ -191,6 +228,8 @@
     background:url("../images/mainBack.jpg");
     background-color: #070707; /* Used if the image is unavailable */
     height: 400px; /* You must set a specified height */
+    width: 100%;
+    overflow: hidden;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -281,4 +320,162 @@
 
 footer {
     text-align: center;
+}
+
+/* For mobile phones: */
+@media (max-width: 480px) {
+    .flexNav {
+        height: 180px;
+        display: grid;
+        overflow:hidden;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-row-gap: 30px;
+        grid-template-areas:
+          "bannerArea bannerArea bannerArea bannerArea"
+          "homeIcon armsIcon gearIcon paIcon";
+        border: solid 3px black;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+    
+    #mainHeader {
+      font-size: 36px;
+    }
+
+    #titleBanner {
+        display: none;
+    }
+
+    #mobileBanner {
+        display: block;
+        width: 100%;
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: contain; /* Resize the background image to cover the entire container */
+    
+    }
+
+    .topnav a {
+        display: flex;
+        flex-direction: column;
+        font-size: 125%;
+        line-height: 110%;
+    }
+
+    /* Shop area */
+    .mainBody {
+        background:url("../images/mainBack.jpg");
+        background-color: #070707; /* Used if the image is unavailable */
+        height: 700px; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        border: solid 3px black;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+    .shop {
+        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    #weapons {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    #gear {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    #personalAssistants {
+        margin: 0;
+    }
+
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    /* For tablets: */
+    .flexNav {
+        height: 180px;
+        max-width: 540px;
+        display: grid;
+        overflow:hidden;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-row-gap: 30px;
+        grid-template-areas:
+          "bannerArea bannerArea bannerArea bannerArea"
+          "homeIcon armsIcon gearIcon paIcon";
+        border: solid 3px black;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+    
+    #mainHeader {
+      font-size: 36px;
+    }
+
+    #titleBanner {
+        display: none;
+    }
+
+    #mobileBanner {
+        display: block;
+        width: 100%;
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: contain; /* Resize the background image to cover the entire container */
+    
+    }
+
+    .topnav a {
+        display: flex;
+        flex-direction: column;
+        font-size: 125%;
+        line-height: 110%;
+    }
+
+    /* Shop area */
+    .mainBody {
+        background:url("../images/mainBack.jpg");
+        background-color: #070707; /* Used if the image is unavailable */
+        height: 700px; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        border: solid 3px black;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+    .shop {
+        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    #weapons {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    #gear {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    #personalAssistants {
+        margin: 0;
+    }
+
+/*
+  @media only screen and (min-width: 768px) {
+
+  }
+*/
 }

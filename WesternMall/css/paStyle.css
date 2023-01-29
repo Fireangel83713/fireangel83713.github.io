@@ -115,7 +115,8 @@ img {
       "corpImage purchaseProduct";
 }
 
-.paCatalogue {  display: grid;
+.paCatalogue {  
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
@@ -219,5 +220,66 @@ img {
   
   .starRating { grid-area: starRating; }
   
-  
+/* For mobile phones: */
+@media (max-width: 480px) {
+    .paCatalogue {  display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        align-items: center;
+        grid-template-areas:
+          "pa1 pa2"
+          "pa3 pa4"
+          "pa5 pa6";
+      }
+      
+      #pa1 { 
+        grid-area: pa1;
+        align-self: center;
+        text-align: center; 
+    }
+      
+      #pa2 { 
+        grid-area: pa2; 
+        align-self: center;
+        text-align: center; 
+    }
+      
+      #pa3 { 
+        grid-area: pa3; 
+        align-self: center;
+        text-align: center; 
+    }
+      
+      #pa4 { 
+        grid-area: pa4; 
+        align-self: center;
+        text-align: center; 
+    }
+      
+      #pa5 { 
+        grid-area: pa5;
+        align-self: center;
+        text-align: center;  
+    }
+      
+      #pa6 { 
+        grid-area: pa6; 
+        align-self: center;
+        text-align: center; 
+    }
+      
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    /* For tablets: */
+
+
+/*
+  @media only screen and (min-width: 768px) {
+
+  }
+*/
+}
   
