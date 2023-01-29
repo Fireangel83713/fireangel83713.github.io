@@ -198,11 +198,21 @@ img {
   
 .reviewerReview { 
     grid-area: reviewerReview; 
-    margin-right: 50px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-right: 90px;
     padding-left: 50px;
 }
   
-  .imagePosted { grid-area: imagePosted; }
+  .imagePosted { 
+    grid-area: imagePosted;
+    align-self: center;
+    padding-right: 50px;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
   
   .reviewerImage { 
     grid-area: reviewerImage; 
