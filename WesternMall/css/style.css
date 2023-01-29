@@ -325,15 +325,20 @@ footer {
 }
 
 /* For mobile phones: */
-@media (max-width: 480px) {
+@media (max-width: 280px) {
+    .flexContainer {
+        width: 230px;
+        justify-content: center;
+        align-items: center;
+    }
+
     .flexNav {
         height: 180px;
         display: grid;
         overflow:hidden;
+        width: 220px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 0px 0px;
-        grid-row-gap: 30px;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas:
           "bannerArea bannerArea bannerArea bannerArea"
           "homeIcon armsIcon gearIcon paIcon";
@@ -351,22 +356,15 @@ footer {
 
     #mobileBanner {
         display: block;
-        width: 100%;
+        width: 220px;
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: contain; /* Resize the background image to cover the entire container */
-    
-    }
-
-    .topnav a {
-        display: flex;
-        flex-direction: column;
-        font-size: 125%;
-        line-height: 110%;
     }
 
     /* Shop area */
     .mainBody {
+        width: 220px;
         background:url("../images/mainBack.jpg");
         background-color: #070707; /* Used if the image is unavailable */
         height: 700px; /* You must set a specified height */
@@ -398,19 +396,328 @@ footer {
         margin: 0;
     }
 
+    #scrollingTextBanner {
+        height: 32px;
+        width:75%;
+        white-space:nowrap;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: 5px solid rgb(22, 22, 22);
+        border-radius: 25px;
+        justify-content: center;
+        color: white;
+        text-shadow: 3px 4px 7px rgba(81,67,21,0.8);
+        overflow: hidden;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+    #homeImage {
+        background-image: url("../images/homeNav.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:contain; /* Resize the background image to cover the entire container */
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 48%;
+    }
+    
+    #weaponImage {
+        background-image: url("../images/weaponImage.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:contain; /* Resize the background image to cover the entire container */
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 48%;
+    }
+    
+    #gearImage {
+        background-image: url("../images/gearNav.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:contain; /* Resize the background image to cover the entire container */
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 48%;
+    }
+    
+    #paImage {
+        background-image: url("../images/paNav.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:contain; /* Resize the background image to cover the entire container */
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 48%;
+    }
+  }
+
+  @media (min-width: 281px) and (max-width: 375px) {
+    .flexContainer {
+        width: 330px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flexNav {
+        height: 180px;
+        display: grid;
+        overflow:hidden;
+        width: 320px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-row-gap: 0px;
+        grid-template-areas:
+          "bannerArea bannerArea bannerArea bannerArea"
+          "homeIcon armsIcon gearIcon paIcon";
+        border: solid 3px black;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+    
+    #mainHeader {
+      font-size: 36px;
+    }
+
+    #titleBanner {
+        display: none;
+    }
+
+    #mobileBanner {
+        display: block;
+        width: 320px;
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: contain; /* Resize the background image to cover the entire container */
+    }
+
+    /* Shop area */
+    .mainBody {
+        width: 320px;
+        background:url("../images/mainBack.jpg");
+        background-color: #070707; /* Used if the image is unavailable */
+        height: 700px; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        border: solid 3px black;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+    .shop {
+        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    #weapons {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    #gear {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    #personalAssistants {
+        margin: 0;
+    }
+
+    #scrollingTextBanner {
+        height: 32px;
+        width:75%;
+        white-space:nowrap;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: 5px solid rgb(22, 22, 22);
+        border-radius: 25px;
+        justify-content: center;
+        color: white;
+        text-shadow: 3px 4px 7px rgba(81,67,21,0.8);
+        overflow: hidden;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+    #homeImage {
+        background-image: url("../images/homeNav.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:contain; /* Resize the background image to cover the entire container */
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 48%;
+    }
+    
+    #weaponImage {
+        background-image: url("../images/weaponImage.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:contain; /* Resize the background image to cover the entire container */
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 48%;
+    }
+    
+    #gearImage {
+        background-image: url("../images/gearNav.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:contain; /* Resize the background image to cover the entire container */
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 48%;
+    }
+    
+    #paImage {
+        background-image: url("../images/paNav.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:contain; /* Resize the background image to cover the entire container */
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 48%;
+    }
+  }
+
+@media (min-width: 376px) and (max-width: 480px) {
+    .flexContainer {
+        width: 395px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flexNav {
+        height: 180px;
+        display: grid;
+        overflow:hidden;
+        width: 385px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-row-gap: 30px;
+        grid-template-areas:
+          "bannerArea bannerArea bannerArea bannerArea"
+          "homeIcon armsIcon gearIcon paIcon";
+        border: solid 3px black;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+    
+    #mainHeader {
+      font-size: 36px;
+    }
+
+    #titleBanner {
+        display: none;
+    }
+
+    #mobileBanner {
+        display: block;
+        width: 385px;
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: contain; /* Resize the background image to cover the entire container */
+    }
+
+    /* Shop area */
+    .mainBody {
+        width: 385px;
+        background:url("../images/mainBack.jpg");
+        background-color: #070707; /* Used if the image is unavailable */
+        height: 700px; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        border: solid 3px black;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+    .shop {
+        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    #weapons {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    #gear {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    #personalAssistants {
+        margin: 0;
+    }
+
+    #scrollingTextBanner {
+        height: 32px;
+        width:75%;
+        white-space:nowrap;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: 5px solid rgb(22, 22, 22);
+        border-radius: 25px;
+        justify-content: center;
+        color: white;
+        text-shadow: 3px 4px 7px rgba(81,67,21,0.8);
+        overflow: hidden;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+    #homeImage {
+        background-image: url("../images/homeNav.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:contain; /* Resize the background image to cover the entire container */
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 48%;
+    }
+    
+    #weaponImage {
+        background-image: url("../images/weaponImage.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:contain; /* Resize the background image to cover the entire container */
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 48%;
+    }
+    
+    #gearImage {
+        background-image: url("../images/gearNav.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:contain; /* Resize the background image to cover the entire container */
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 48%;
+    }
+    
+    #paImage {
+        background-image: url("../images/paNav.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:contain; /* Resize the background image to cover the entire container */
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 48%;
+    }
   }
 
   @media (min-width: 481px) and (max-width: 768px) {
     /* For tablets: */
+    .flexContainer {
+        width: 500px;
+        justify-content: center;
+        align-items: center;
+    }
+
     .flexNav {
-        height: 180px;
-        max-width: 540px;
+        height: 210px;
+        max-width: 490px;
         display: grid;
         overflow:hidden;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 0px 0px;
-        grid-row-gap: 30px;
+        grid-row-gap: 60px;
         grid-template-areas:
           "bannerArea bannerArea bannerArea bannerArea"
           "homeIcon armsIcon gearIcon paIcon";
@@ -426,20 +733,16 @@ footer {
         display: none;
     }
 
+    .bannerArea {
+        margin-bottom: 5px;
+    }
+
     #mobileBanner {
         display: block;
-        width: 100%;
+        width: 490px;
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: contain; /* Resize the background image to cover the entire container */
-    
-    }
-
-    .topnav a {
-        display: flex;
-        flex-direction: column;
-        font-size: 125%;
-        line-height: 110%;
     }
 
     /* Shop area */
@@ -447,13 +750,14 @@ footer {
         background:url("../images/mainBack.jpg");
         background-color: #070707; /* Used if the image is unavailable */
         height: 700px; /* You must set a specified height */
+        width: 490px;
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover; /* Resize the background image to cover the entire container */
         border: solid 3px black;
         box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     }
-
+    
     .shop {
         padding-top: 25px;
         display: flex;
@@ -475,6 +779,65 @@ footer {
         margin: 0;
     }
 
+    #scrollingTextBanner {
+        height: 32px;
+        width:75%;
+        white-space:nowrap;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: 5px solid rgb(22, 22, 22);
+        border-radius: 25px;
+        justify-content: center;
+        color: white;
+        text-shadow: 3px 4px 7px rgba(81,67,21,0.8);
+        overflow: hidden;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+    
+    #homeImage {
+        background-image: url("../images/homeNav.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:contain; /* Resize the background image to cover the entire container */
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 86%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+    #weaponImage {
+        background-image: url("../images/weaponImage.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:contain; /* Resize the background image to cover the entire container */
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 86%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+    #gearImage {
+        background-image: url("../images/gearNav.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:contain; /* Resize the background image to cover the entire container */
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 86%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+    #paImage {
+        background-image: url("../images/paNav.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:contain; /* Resize the background image to cover the entire container */
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 86%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
 /*
   @media only screen and (min-width: 768px) {
 
