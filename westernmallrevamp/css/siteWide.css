@@ -32,8 +32,11 @@
   .container {
     /*padding:150px;*/
     background: #2F2F31;
-    margin-right: 5em;
-    margin-bottom: 5em;;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    z-index: 100;
   }
   
   #navMenu {
@@ -146,7 +149,6 @@
   /* Scrolling Banner controls */
   .ScrollingTextBanner { 
     grid-area: ScrollingTextBanner;
-    max-width: 100%;
     text-align: center;
     height: 64px;
     width: 75%;
@@ -167,6 +169,7 @@
 /* Scrolling text banner animation */
 #scroll-text {
   align-self: center;
+  justify-self: center;
   text-align: center;
   margin: 0;
 
