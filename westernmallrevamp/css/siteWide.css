@@ -24,6 +24,9 @@
     height: 100%;
     margin: 0px;
     overflow: hidden;
+    background: rgb(228,4,20);
+    background: radial-gradient(circle, rgba(228,4,20,1) 0%, rgba(148,187,233,1) 100%);
+
   }
   
   .container {
@@ -138,43 +141,166 @@
     color: #EEEEEE;
   }
 
-
-
-  
- /* Old Header Nav */
-  .flexNav {  
-    grid-area: flexNav;
+  /* Scrolling Banner controls */
+  .ScrollingTextBanner { 
+    grid-area: ScrollingTextBanner;
     max-width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "titleBanner titleBanner titleBanner titleBanner"
-      "titleBanner titleBanner titleBanner titleBanner"
-      "home arms gear pas"
-      "home arms gear pas";
-      border: solid 2px black;
-    }
-  
-  .titleBanner {
-    grid-area: titleBanner;
-    max-width: 100%;
-    justify-self: center;
-    align-self: center;
+    text-align: center;
+    height: 64px;
+    width: 75%;
+    max-width:95%;
+    white-space:nowrap;
+    margin-bottom: 5px;
+    border: 5px solid rgb(22, 22, 22);
+    border-radius: 25px;
+    justify-content: center;
+    align-content: center;
+    font-size: 30px;
+    color: white;
+    text-shadow: 3px 4px 7px rgba(81,67,21,0.8);
+    overflow: hidden;
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   }
   
-  #mobileBannerImg {
-    display: none;
-  }
+/* Scrolling text banner animation */
+#scroll-text {
+  align-self: center;
+  text-align: center;
+  margin: 0;
 
-  #titleBannerImg {
-    max-width: 100%;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size:auto; /* Resize the background image to cover the entire container */
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: my-animation 20s linear infinite;
+  -webkit-animation: my-animation 20s linear infinite;
+  animation: my-animation 20s linear infinite;
 }
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+/* Title Banner Controls */
+.titleBanner {
+  grid-area: titleBanner;
+  max-width: 100%;
+  justify-self: center;
+  align-self: center;
+}
+
+#titleBanner {
+  max-width: 100%;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:auto; /* Resize the background image to cover the entire container */
+}
+
+#mobileBanner {
+  display: none;
+}
+
+.home {
+  grid-area: home;
+}
+
+.arms {
+  grid-area: arms;
+}
+
+.gear {
+  grid-area: gear;
+}
+
+.pas {
+  grid-area: pas;
+}
+
+.ScrollingTextBanner {
+  grid-area: ScrollingTextBanner;
+}
+
+.shop {
+  grid-area: shop;
+}
+
+.shopArms {
+  grid-area: shopArms;
+}
+
+.shopGear {
+  grid-area: shopGear;
+}
+
+.shopPas {
+  grid-area: shopPas;
+}
+
+.registration {
+  grid-area: registration;
+}
+
+.questions {
+  grid-area: questions;
+}
+
+.advert {
+  grid-area: advert;
+}
+
+.advertNav {
+  grid-area: advertNav;
+}
+
+.advertCost {
+  grid-area: advertCost;
+}
+
+.advertBuy {
+  grid-area: advertBuy;
+}
+
+.advertVideo {
+  grid-area: advertVideo;
+}
+
+.advertVideoStatement {
+  grid-area: advertVideoStatement;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+
+
+
+  
+
+  
+
 
   .home {
     justify-self: center;
@@ -266,65 +392,7 @@
     background-size:contain; /* Resize the background image to cover the entire container */
   }
 
-  /* Scrolling Banner controls */
-  .ScrollingTextBanner { 
-    grid-area: ScrollingTextBanner;
-    max-width: 100%;
-    text-align: center;
-    height: 64px;
-    width: 75%;
-    max-width:95%;
-    white-space:nowrap;
-    margin-bottom: 5px;
-    border: 5px solid rgb(22, 22, 22);
-    border-radius: 25px;
-    justify-content: center;
-    align-content: center;
-    font-size: 30px;
-    color: white;
-    text-shadow: 3px 4px 7px rgba(81,67,21,0.8);
-    overflow: hidden;
-    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  }
 
-/* Scrolling text banner animation */
-#scroll-text {
-    align-self: center;
-    text-align: center;
-    margin: 0;
 
-    /* animation properties */
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-    
-    -moz-animation: my-animation 20s linear infinite;
-    -webkit-animation: my-animation 20s linear infinite;
-    animation: my-animation 20s linear infinite;
-  }
-  
-  /* for Firefox */
-  @-moz-keyframes my-animation {
-    from { -moz-transform: translateX(100%); }
-    to { -moz-transform: translateX(-100%); }
-  }
-  
-  /* for Chrome */
-  @-webkit-keyframes my-animation {
-    from { -webkit-transform: translateX(100%); }
-    to { -webkit-transform: translateX(-100%); }
-  }
-  
-  @keyframes my-animation {
-    from {
-      -moz-transform: translateX(100%);
-      -webkit-transform: translateX(100%);
-      transform: translateX(100%);
-    }
-    to {
-      -moz-transform: translateX(-100%);
-      -webkit-transform: translateX(-100%);
-      transform: translateX(-100%);
-    }
-}
+
 
