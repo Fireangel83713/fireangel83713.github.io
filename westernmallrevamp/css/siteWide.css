@@ -32,12 +32,12 @@
   .container {
     /*padding:150px;*/
     background: #2F2F31;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 20px;
-    z-index: 100;
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    }
   
   #navMenu {
     top: 150px;
@@ -227,24 +227,10 @@
   display: none;
 }
 
-.home {
-  grid-area: home;
-}
-
-.arms {
-  grid-area: arms;
-}
-
-.gear {
-  grid-area: gear;
-}
-
-.pas {
-  grid-area: pas;
-}
-
 .ScrollingTextBanner {
   grid-area: ScrollingTextBanner;
+  flex: 1;
+  margin-top: 20px;
 }
 
 .shop {
@@ -256,7 +242,8 @@
     "shopArms shopGear shopPas"
     "shopArms shopGear shopPas"
     "faqs faqs faqs"; 
-  grid-area: shop; 
+  grid-area: shop;
+  flex: 1; 
 }
 
 .shopArms {
