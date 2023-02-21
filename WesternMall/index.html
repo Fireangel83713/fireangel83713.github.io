@@ -27,6 +27,9 @@
                             better responsive design
                             Updated meta data 
     Jan 28, 2023  ver.0.013 Added pa3-pa6.html pages
+    Feb 07-08, 2023 ver.0.15 Added popup divs for registration and faqs, alses added JS scripts
+                            to allow them to function. CSS was added to make them appear at the 
+                            center of the page overshadowing the rest of the content. 
 -->
 
 <html lang="en">
@@ -37,7 +40,10 @@
         <meta name="description" content="Western mall for eldrith earth rpg main page">
         <meta name="keywords" content="rpg ttrpg fantasy scifi cyberpunk">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/register.css" type="text/css">
+        <link rel="stylesheet" href="css/faqs.css" type="text/css">
+        <script src="js/register.js"></script>
     </head>
     <body>
         <div class="flexContainer">
@@ -72,8 +78,9 @@
         <div id="scrollingTextBanner">
             <div id="scroll-text"><script src="js\messagesScript.js"></script></div>
         </div>
-        <div class="advert"><img src="images\advert.png"></div>
-        <div class="advert2"><img src="images\advert.png"></div>
+        <div class="advert"><img src="images\advert1bt.png"></div>
+        <div class="advert2"><iframe width="560" height="315" src="https://www.youtube.com/embed/HkPk-uVWLMY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <div class="advert3"><img src="images\gearUp.png"></div>
         <!--Main body container for formatting page background-->
         <main class="mainBody">
             <!--Shop Menu Items, images provided by CSS-->
@@ -93,11 +100,132 @@
                         <div class="paTitle"><h2>Personal<br>Assistants</h2></div>
                     </div>
                 </a>
+                <div class="registration">
+                    <input type="button" class="mainButtons" id="registration" value="Create Account">
+                </div>
+                <div class="faqs">
+                    <input type="button" class="mainButtons" id="questions" value="Questions?">
+                </div>
             </section>
         </main>
         <footer id="footerbottom"> <!--Start Footer-->
             <p>Copyright &copy; 2022. All Rights Reserved</p>
         </footer> <!--End Footer-->
     </div><!--End flexcontainer-->
+
+    <!--popup registration-->
+    <div class="popup">
+        <div id="wmBannerHolder">
+            <img id="wmBannerReg" src="images\wmBanner.png" alt="A grungy text displaying western mall">
+        </div>
+        <h1>Register for an Account</h1>
+        <form>
+            <div>
+                <label for="email_address">E-Mail:</label>
+                <input type="text" name="email_address" id="email_address">
+                <span>*</span>
+            </div>
+            <div>
+                <label for="phone">Mobile Phone:</label>
+                <input type="text" name="phone" id="phone">
+                <span>*</span>
+            </div>
+            <div>
+                <label for="country">Country:</label>
+                <select name="country" id="country">
+                    <option value="">Select a country</option>
+                    <option style="color:red">USA</option>
+                    <option style="color:green">Canada</option>
+                    <option style="color:yellowgreen">Mexico</option>
+                    <option style="color:purple">japan</option>
+                    <option style="color:peru">China</option>
+                    <option style="color:darkred">Russia</option>
+                </select>
+                <span>*</span>
+            </div>
+            <div class="organize">
+                <label>Contact me by:</label>
+                <div id="radios">
+                    <label><input type="radio" name="contact" id="text"
+                        value="text" checked>Text</label>
+                    <label><input type="radio" name="contact" id="email"
+                        value="email">Email</label>
+                    <label><input type="radio" name="contact" id="mobile"
+                        value="mobile">Cell</label>
+                    <label><input type="radio" name="contact" id="none"
+                        value="none">Do not contact</label>
+                    </div>
+            </div>
+            <div class="organize">
+                    <label>Terms of Service:</label>
+                    <div id="chkBox">
+                    <label><input type="checkbox" name="terms" id="terms"
+                        value="yes">I accept<span>&#160;&#160;*</span></label>
+                </div>
+            </div>
+            <div>
+                <label for="comments">Comments:</label>
+                <textarea name="comments" id="comments" row="5" cols="40"></textarea>
+                <span>*</span>
+            </div>
+            <div>
+                <label>&nbsp;</label>
+                <input type="button" id="register" value="Register">
+                <input type="button" id="reset_form" value="Reset">
+                <input type="button" id="close_form" value="Close">
+            </div>
+
+        </form>
+    </div>
+
+    <div class="confirmed">
+        <div id="wmBannerHolder">
+            <img id="wmBannerReg" src="images\wmBanner.png" alt="A grungy text displaying western mall">
+        </div>
+        <div id="thankYouImage">
+            <img id="thankYouRobot" src="images\thankyou.png" alt="A robot thanking you for registering">
+            <div id="rowFlex">
+                <h1>Thanks for registering with us!</h1>
+                <p>You should get a confirmation email shortly.</p>
+                <label>&nbsp;</label>
+                <input type="button" id="close_form" value="Close">
+            </div>
+        </div>
+    </div>
+
+    <!-- Faqs popup -->
+    <div id="faqs">
+    	<h1>WesternMall FAQs</h1>
+        <br>
+        <hr>
+		<h2><a href="#">What is the WesternMall?</a></h2>
+		<div>
+			<p>(OOC) It is a website where players can spend their hard earned Terran Units. All 
+                equipment available in the game will be able to be shopped for here at the 
+                WesternMall website.
+			</p>
+            <p>(IC) It's only the best place to shop for the serious merc. Things that go BOOM, things
+                that keep you from going BOOM, and a few things to make your life easier are all available
+                here at the WesternMall.
+            </p>
+            <p><br><sub><em>*OOC is out of character and IC is In Character</em></sub></p>
+		</div>
+		<h2><a href="#">Why a website?</a></h2>
+		<div>
+			<p>Three reasons:</p>
+			<ul>
+				<li>It's easier than sharing a book.</li>
+				<li>It allows for more items to be added over time without publishing a new book.</li>
+				<li>It adds a lot more immersion to the game.</li>
+			</ul>
+		</div>
+		<h2><a href="#">Do you have a life outside of game designing and developing?</a></h2>
+		<div>
+			<p>No, I do not.
+			</p>
+		</div>
+        <input type="button" id="close_faqs" value="Close">
+        <script src="js/faqs.js"></script>
+    </div>
     </body>
 </html>

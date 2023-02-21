@@ -1,24 +1,36 @@
 /* Font imports */
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: rgb(228,4,20);
+    background: radial-gradient(circle, rgba(228,4,20,1) 0%, rgba(148,187,233,1) 100%);
+  }
+
 /* Flex formatting */
 .flexContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 0.1 1.9fr 1fr;
+    grid-template-rows: .5fr 0.08 1.9fr 1fr;
     grid-template-areas: 
     "advert flexNav advert2"
     "advert scrollingTextBanner advert2"
-    "advert mainBody advert2"
+    "advert mainBody advert3"
     "footer footer footer";
-    gap: 10px 10px;
+    gap: 5px 5px;
+    align-content: top;
     width: 100%;
     max-width: 2200px;
-    place-items: center;
-    background: rgb(228,4,20);
-    background: radial-gradient(circle, rgba(228,4,20,1) 0%, rgba(148,187,233,1) 100%);
     justify-content: center;
-    align-items: center;
+}
+
+.blur   {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
 }
 
 /* Header Formatting */
@@ -31,25 +43,41 @@
 
 .advert {
     grid-area: advert;
-    max-width: 500px;
-    height: 620px;
+    margin-top: 3em;
+    width: 500px;
+    height: 615px;
+    overflow: hidden;
     border: solid 3px black;
     box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .advert img {
-    width: 400px;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: cover;
 }
 
 .advert2 {
     grid-area: advert2;
-    max-width: 500px;
-    height: 620px;
+    margin-top: 3em;
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto; 
+    z-index: 1;
+    background-size: cover;
+    overflow: hidden;
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.advert3 {
+    grid-area: advert3;
+    max-width: 520px;
+    height: 300px;
+    align-self: top;
     justify-content: center;
-    align-items: center;
     border: solid 3px black;
     box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
@@ -65,8 +93,10 @@
 
 .flexNav {
     grid-area: flexNav;
+    margin-top: 2em;
     height: 165px;
     width: 100%;
+    place-self: center;
     display: grid;
     overflow:hidden;
     width: 100%;
@@ -75,8 +105,6 @@
     grid-template-areas:
       "bannerArea bannerArea bannerArea bannerArea"
       "homeIcon armsIcon gearIcon paIcon";
-    border: solid 3px black;
-    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .flexNav a {
@@ -124,6 +152,9 @@
 }
 
 #bannerRow {
+
+    align-self: center;
+    justify-self: center;
     height: 100px;
 }
 
@@ -205,15 +236,19 @@
 
 #scrollingTextBanner {
     grid-area: scrollingTextBanner;
-    height: 32px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    height: 64px;
     width: 75%;
     max-width:600px;
     white-space:nowrap;
-    margin-top: 5px;
     margin-bottom: 5px;
     border: 5px solid rgb(22, 22, 22);
     border-radius: 25px;
     justify-content: center;
+    align-content: center;
+    font-size: 30px;
     color: white;
     text-shadow: 3px 4px 7px rgba(81,67,21,0.8);
     overflow: hidden;
@@ -222,7 +257,8 @@
 
 /* Scrolling text banner animation */
 #scroll-text {
-    padding-top: .3em;
+    padding-top: .4em;
+    align-self: center;
     text-align: center;
     margin: 0;
 
@@ -231,9 +267,9 @@
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
     
-    -moz-animation: my-animation 15s linear infinite;
-    -webkit-animation: my-animation 15s linear infinite;
-    animation: my-animation 15s linear infinite;
+    -moz-animation: my-animation 20s linear infinite;
+    -webkit-animation: my-animation 20s linear infinite;
+    animation: my-animation 20s linear infinite;
   }
   
   /* for Firefox */
@@ -269,7 +305,7 @@
     background:url("../images/mainBack.jpg");
     background-color: #070707; /* Used if the image is unavailable */
     height: 400px; /* You must set a specified height */
-    width: 800px;
+    width: 660px;
     overflow: hidden;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -278,10 +314,18 @@
     box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.shop {
-    display: flex;
-    flex-direction: row;
-    align-items:center;
+.shop {  
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.9fr 0.2fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "arms gear pas"
+      "registration registration registration"
+      "faqs faqs faqs";
 }
 
 .shop a {
@@ -359,6 +403,53 @@
     background-size:cover; /* Resize the background image to cover the entire container */
 }
 
+.arms {
+    justify-self: center;
+    align-self: center;
+    grid-area: arms;
+}
+
+.gear {
+    justify-self: center;
+    align-self: center;
+    grid-area: gear;
+}
+
+.pas {
+    justify-self: center;
+    align-self: center;
+    grid-area: pas;
+}
+
+.registration {
+    justify-self: center;
+    align-self: center;
+    grid-area: registration;
+}
+
+.faqs {
+    justify-self: center;
+    align-self: center;
+    grid-area: faqs;
+}
+
+.mainButtons {
+    background-color: #070707;
+    color: red;
+    border: 3px solid red;
+    border-radius: 15px;
+    height: 30px;
+    width: 150px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.mainButtons:hover {
+    background-color: red;
+    color: black;
+}
+
 footer {
     grid-area: footer;
     text-align: center;
@@ -407,7 +498,6 @@ footer {
         width: 220px;
         background:url("../images/mainBack.jpg");
         background-color: #070707; /* Used if the image is unavailable */
-        height: 700px; /* You must set a specified height */
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover; /* Resize the background image to cover the entire container */
@@ -415,25 +505,110 @@ footer {
         box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     }
 
-    .shop {
-        padding-top: 25px;
-        display: flex;
-        flex-direction: column;
-        align-items:center;
+    .shop {  
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        height: 400px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 0.3fr 0.3fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "arms"
+          "gear"
+          "pas"
+          "registration"
+          "faqs";
+      }
+      
+    .registration {
+        justify-self: center;
+        align-self: center;
+        grid-area: registration;
     }
-
+      
+    .faqs {
+        justify-self: center;
+        align-self: center;
+        grid-area: faqs;
+    }
+      
+    .weaponTitle {
+        display: none;
+    }
+    
+    #weapons:hover .weaponTitle {
+        display: block;
+    }
+    
     #weapons {
-        margin: 0;
-        margin-bottom: 1em;
+        grid-area: arms;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        border: 3px solid red;
+        border-radius: 15px;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-image: url("../images/weaponMenu.jpg");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:cover; /* Resize the background image to cover the entire container */
     }
-
+    
+    .gearTitle {
+        display: none;
+    }
+    
+    #gear:hover .gearTitle {
+        display: block;
+    }
+    
     #gear {
-        margin: 0;
-        margin-bottom: 1em;
+        grid-area: gear;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        border: 3px solid red;
+        border-radius: 15px;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-image: url("../images/gearMenu.jpg");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:cover; /* Resize the background image to cover the entire container */}
+    
+    .paTitle {
+        display: none;
     }
-
+     
+    #personalAssistants:hover .paTitle {
+        display: block;
+    }
+    
     #personalAssistants {
-        margin: 0;
+        grid-area: pas;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        border: 3px solid red;
+        border-radius: 15px;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-image: url("../images/paMenu.jpg");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:cover; /* Resize the background image to cover the entire container */
     }
 
     #scrollingTextBanner {
@@ -533,7 +708,7 @@ footer {
         width: 320px;
         background:url("../images/mainBack.jpg");
         background-color: #070707; /* Used if the image is unavailable */
-        height: 700px; /* You must set a specified height */
+        height: 600px; /* You must set a specified height */
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover; /* Resize the background image to cover the entire container */
@@ -541,27 +716,112 @@ footer {
         box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     }
 
-    .shop {
-        padding-top: 25px;
-        display: flex;
-        flex-direction: column;
-        align-items:center;
+    .shop {  
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        height: 400px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 0.3fr 0.3fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "arms"
+          "gear"
+          "pas"
+          "registration"
+          "faqs";
+      }
+      
+    .registration {
+        justify-self: center;
+        align-self: center;
+        grid-area: registration;
     }
-
+      
+    .faqs {
+        justify-self: center;
+        align-self: center;
+        grid-area: faqs;
+    }
+      
+    .weaponTitle {
+        display: none;
+    }
+    
+    #weapons:hover .weaponTitle {
+        display: block;
+    }
+    
     #weapons {
-        margin: 0;
-        margin-bottom: 1em;
+        grid-area: arms;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        border: 3px solid red;
+        border-radius: 15px;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-image: url("../images/weaponMenu.jpg");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:cover; /* Resize the background image to cover the entire container */
     }
-
+    
+    .gearTitle {
+        display: none;
+    }
+    
+    #gear:hover .gearTitle {
+        display: block;
+    }
+    
     #gear {
-        margin: 0;
-        margin-bottom: 1em;
+        grid-area: gear;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        border: 3px solid red;
+        border-radius: 15px;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-image: url("../images/gearMenu.jpg");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:cover; /* Resize the background image to cover the entire container */}
+    
+    .paTitle {
+        display: none;
     }
-
+     
+    #personalAssistants:hover .paTitle {
+        display: block;
+    }
+    
     #personalAssistants {
-        margin: 0;
+        grid-area: pas;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        border: 3px solid red;
+        border-radius: 15px;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-image: url("../images/paMenu.jpg");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:cover; /* Resize the background image to cover the entire container */
     }
-
+    
     #scrollingTextBanner {
         height: 32px;
         width:75%;
@@ -667,27 +927,112 @@ footer {
         box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     }
 
-    .shop {
-        padding-top: 25px;
-        display: flex;
-        flex-direction: column;
-        align-items:center;
+    .shop {  
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        height: 600px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 0.3fr 0.3fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "arms"
+          "gear"
+          "pas"
+          "registration"
+          "faqs";
+      }
+      
+    .registration {
+        justify-self: center;
+        align-self: center;
+        grid-area: registration;
     }
-
+      
+    .faqs {
+        justify-self: center;
+        align-self: center;
+        grid-area: faqs;
+    }
+      
+    .weaponTitle {
+        display: none;
+    }
+    
+    #weapons:hover .weaponTitle {
+        display: block;
+    }
+    
     #weapons {
-        margin: 0;
-        margin-bottom: 1em;
+        grid-area: arms;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        border: 3px solid red;
+        border-radius: 15px;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-image: url("../images/weaponMenu.jpg");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:cover; /* Resize the background image to cover the entire container */
     }
-
+    
+    .gearTitle {
+        display: none;
+    }
+    
+    #gear:hover .gearTitle {
+        display: block;
+    }
+    
     #gear {
-        margin: 0;
-        margin-bottom: 1em;
+        grid-area: gear;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        border: 3px solid red;
+        border-radius: 15px;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-image: url("../images/gearMenu.jpg");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:cover; /* Resize the background image to cover the entire container */}
+    
+    .paTitle {
+        display: none;
     }
-
+     
+    #personalAssistants:hover .paTitle {
+        display: block;
+    }
+    
     #personalAssistants {
-        margin: 0;
+        grid-area: pas;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        border: 3px solid red;
+        border-radius: 15px;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-image: url("../images/paMenu.jpg");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:cover; /* Resize the background image to cover the entire container */
     }
-
+    
     #scrollingTextBanner {
         height: 32px;
         width:75%;
@@ -798,27 +1143,112 @@ footer {
         box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     }
     
-    .shop {
-        padding-top: 25px;
-        display: flex;
-        flex-direction: column;
-        align-items:center;
+    .shop {  
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        height: 400px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 0.3fr 0.3fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "arms"
+          "gear"
+          "pas"
+          "registration"
+          "faqs";
+      }
+      
+    .registration {
+        justify-self: center;
+        align-self: center;
+        grid-area: registration;
     }
-
+      
+    .faqs {
+        justify-self: center;
+        align-self: center;
+        grid-area: faqs;
+    }
+      
+    .weaponTitle {
+        display: none;
+    }
+    
+    #weapons:hover .weaponTitle {
+        display: block;
+    }
+    
     #weapons {
-        margin: 0;
-        margin-bottom: 1em;
+        grid-area: arms;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 175px;
+        height: 175px;
+        border: 3px solid red;
+        border-radius: 15px;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-image: url("../images/weaponMenu.jpg");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:cover; /* Resize the background image to cover the entire container */
     }
-
+    
+    .gearTitle {
+        display: none;
+    }
+    
+    #gear:hover .gearTitle {
+        display: block;
+    }
+    
     #gear {
-        margin: 0;
-        margin-bottom: 1em;
+        grid-area: gear;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 175px;
+        height: 175px;
+        border: 3px solid red;
+        border-radius: 15px;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-image: url("../images/gearMenu.jpg");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:cover; /* Resize the background image to cover the entire container */}
+    
+    .paTitle {
+        display: none;
     }
-
+     
+    #personalAssistants:hover .paTitle {
+        display: block;
+    }
+    
     #personalAssistants {
-        margin: 0;
+        grid-area: pas;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 175px;
+        height: 175px;
+        border: 3px solid red;
+        border-radius: 15px;
+        box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-image: url("../images/paMenu.jpg");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size:cover; /* Resize the background image to cover the entire container */
     }
-
+    
     #scrollingTextBanner {
         height: 32px;
         width:75%;

@@ -1,0 +1,173 @@
+/* Body styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo h1 {
+    margin: 0;
+    font-size: 36px;
+  }
+  
+  .search {
+    flex-grow: 1;
+    margin: 0 20px;
+  }
+  
+  .search input[type="text"] {
+    border: none;
+    padding: 10px;
+    width: 70%;
+  }
+  
+  .search button[type="submit"] {
+    border: none;
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Hero section styles */
+  .hero img {
+    width: 100%;
+  }
+  
+  /* Categories section styles */
+  .categories {
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  .categories h2 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+  }
+  
+  .categories ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .categories li {
+    margin-right: 20px;
+  }
+  
+  .categories a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Products section styles */
+  .products {
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  .products h2 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+  }
+  
+  .products ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .products li {
+    flex-basis: 30%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .products li img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .products li h3 {
+    margin: 0;
+  }
+  
+  .products li p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .products li button {
+    border: none;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  /* Reviews section styles */
+  .reviews {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .reviews h2 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+  }
+  
+  .reviews ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .reviews li {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  .reviews li p {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .reviews li p:last-of-type {
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+  }
