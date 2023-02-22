@@ -3,8 +3,8 @@
 html, body {
   width: 100%;
   height: 100%;
-  margin: 0px;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
   background: rgb(228,4,20);
   background: radial-gradient(circle, rgba(228,4,20,1) 0%, rgba(148,187,233,1) 100%);
 
@@ -256,7 +256,8 @@ i {
     "advertAside1 shop advertAside2"
     "advertAside1 shop advertAside2"
     "advertAside1 shop advertAside2";
-  border:#101010 3px solid;
+  max-height: 75vh;
+  margin-top: 3em;
 }
 
 .advertAside1 { 
@@ -296,24 +297,18 @@ i {
 
  /* Shop area controls */
 .shop {
-  display: grid; 
-  grid-row: 1 / span 4;
-  grid-column: 1 / span 3;
-  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  width: 80%;
   height: 100%;
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: .5fr 2fr .5fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    ". . ."
-    "shopArms shopGear shopPas"
-    ". . .";
   grid-area: shop;
   background:url("../images/mainBack.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   overflow: hidden;
+  align-self: center;
+  justify-self: center;
   align-items: center;
   justify-content: center;
   border: 3px black solid;
@@ -326,13 +321,10 @@ i {
   align-items: center;
   align-self: center;
   justify-self: center;
-  grid-row: 2;
-  grid-column: 1;
-  width: 75%;
-  height: 75%;
+  width: 10em;
+  height: 10em;
   border: 3px solid red;
   border-radius: 15px;
-  margin-right: 1em;
   box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   background-image: url("../images/weaponMenu.jpg");
   background-position: center; /* Center the image */
@@ -347,13 +339,10 @@ i {
   align-items: center;
   align-self: center;
   justify-self: center;
-  grid-row: 2;
-  grid-column: 2;
-  width: 75%;
-  height: 75%;
+  width: 10em;
+  height: 10em;
   border: 3px solid red;
   border-radius: 15px;
-  margin-right: 1em;
   box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   background-image: url("../images/gearMenu.jpg");
   background-position: center; /* Center the image */
@@ -368,10 +357,8 @@ i {
   align-items: center;
   align-self: center;
   justify-self: center;
-  grid-row: 2;
-  grid-column: 3;
-  width: 75%;
-  height: 75%;
+  width: 10em;
+  height: 10em;
   border: 3px solid red;
   border-radius: 15px;
   box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -425,11 +412,10 @@ i {
 .advert {
   grid-area: advert;
   grid-row: 1;
-  grid-column: 1;
-  object-fit: cover;
-  width: 100%;
+  grid-column: 1 / span 2;
+  object-fit: contain;
+  max-width: 100%;
   max-height: 100%;
-  overflow: hidden;
   justify-self: center;
   align-self: center;
 }
@@ -449,8 +435,8 @@ i {
 .advertVideo {
   grid-row: 1;
   grid-column: 1;
-  object-fit: cover;
-  width: 100%;
+  object-fit: contain;
+  max-width: 100%;
   max-height: 100%;
   overflow: hidden;
   justify-self: center;
@@ -460,8 +446,8 @@ i {
 .advertVideoStatement {
   grid-row: 2;
   grid-column: 1;
-  object-fit: cover;
-  width: 100%;
+  object-fit: contain;
+  max-width: 100%;
   max-height: 100%;
   overflow: hidden;
   justify-self: center;
