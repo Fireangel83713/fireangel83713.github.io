@@ -1,0 +1,295 @@
+.paShop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: center;
+}
+
+.paShop a {
+    text-decoration: none;
+}
+#pa1 {
+    grid-area: pa1;
+    display: flex;
+    justify-content: center;
+    width: 190px;
+    height: 190px;
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-image: url("../images/lilBuddy.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:cover; /* Resize the background image to cover the entire container */
+    margin-right: 2em;
+}
+
+#pa2 {
+    grid-area: pa2;
+    display: flex;
+    justify-content: center;
+    width: 190px;
+    height: 190px;
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-image: url("../images/tinHead.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:cover; /* Resize the background image to cover the entire container */
+    margin-right: 2em;
+}
+
+#pa3 {
+    grid-area: pa3;
+    display: flex;
+    justify-content: center;
+    width: 190px;
+    height: 190px;
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-image: url("../images/synergy.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:cover; /* Resize the background image to cover the entire container */
+}
+
+#pa4 {
+    grid-area: pa4;
+    display: flex;
+    justify-content: center;
+    width: 190px;
+    height: 190px;
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-image: url("../images/iSpy.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:cover; /* Resize the background image to cover the entire container */
+    margin-right: 2em;
+}
+
+#pa5 {
+    grid-area: pa5;
+    display: flex;
+    justify-content: center;
+    width: 190px;
+    height: 190px;
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-image: url("../images/hal.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:cover; /* Resize the background image to cover the entire container */
+    margin-right: 2em;
+}
+
+#pa6 {
+    grid-area: pa6;
+    display: flex;
+    justify-content: center;
+    width: 190px;
+    height: 190px;
+   box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-image: url("../images/DHQ.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:cover; /* Resize the background image to cover the entire container */
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#reviewImage {
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paShop {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "productImage1 productDescription"
+      "productImage2 productDescription"
+      "corpImage purchaseProduct";
+}
+
+.paCatalogue {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "pa1 pa2 pa3"
+      "pa4 pa5 pa6";
+  }
+  
+ .paCatalogue a {
+    text-decoration: none;
+}
+
+.productDescription { 
+    grid-area: productDescription;
+    margin-top: 100px;
+    margin-right: 50px;
+    padding-left: 50px;
+}
+  
+.productImage1 { 
+    grid-area: productImage1;
+    height: 300px;
+    width: 300px; 
+    margin-left: 50px;
+    margin-top: 75px;
+    align-items: center;
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:cover; /* Resize the background image to cover the entire container */
+}
+  
+  .productImage2 { 
+    grid-area: productImage2; 
+    height: 300px;
+    width: 300px; 
+    margin-left: 50px;
+    margin-top: 75px;
+    align-items: center;
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:cover; /* Resize the background image to cover the entire container */
+}
+  
+  .corpImage { 
+    grid-area: corpImage; 
+    height: 175px;
+    width: 215px; 
+    margin-left: 90px;
+    margin-top: 75px;
+    align-items: center;
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:auto; /* Resize the background image to cover the entire container */
+
+}
+  
+  .purchaseProduct { 
+    grid-area: purchaseProduct; 
+    text-align: center;
+    height: 300px;
+    width: 450px;
+    border: solid 3px black;
+}
+  
+  .paReview {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "reviews starRating"
+      "reviewerImage reviewerReview"
+      "reviewerImage imagePosted";
+  }
+  
+.reviewerReview { 
+    grid-area: reviewerReview; 
+    text-align: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-right: 90px;
+    padding-left: 50px;
+}
+  
+  .imagePosted { 
+    grid-area: imagePosted;
+    align-self: center;
+    padding-right: 50px;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+  
+  .reviewerImage { 
+    grid-area: reviewerImage; 
+    height: 190px;
+    width: 270px; 
+    margin-left: 50px;
+    align-items: center;
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:cover; /* Resize the background image to cover the entire container */
+}
+  
+  .reviews { grid-area: reviews; }
+  
+  .starRating { grid-area: starRating; }
+  
+/* For mobile phones: */
+@media (max-width: 480px) {
+    .paCatalogue {  display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        align-items: center;
+        grid-template-areas:
+          "pa1 pa2"
+          "pa3 pa4"
+          "pa5 pa6";
+      }
+      
+      #pa1 { 
+        grid-area: pa1;
+        align-self: center;
+        text-align: center; 
+    }
+      
+      #pa2 { 
+        grid-area: pa2; 
+        align-self: center;
+        text-align: center; 
+    }
+      
+      #pa3 { 
+        grid-area: pa3; 
+        align-self: center;
+        text-align: center; 
+    }
+      
+      #pa4 { 
+        grid-area: pa4; 
+        align-self: center;
+        text-align: center; 
+    }
+      
+      #pa5 { 
+        grid-area: pa5;
+        align-self: center;
+        text-align: center;  
+    }
+      
+      #pa6 { 
+        grid-area: pa6; 
+        align-self: center;
+        text-align: center; 
+    }
+      
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    /* For tablets: */
+
+
+/*
+  @media only screen and (min-width: 768px) {
+
+  }
+*/
+}
+  

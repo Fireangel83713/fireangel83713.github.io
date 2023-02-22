@@ -1,11 +1,13 @@
 $(document).ready(function() {
-    $("#navMenu").click(function() {
-     //$(".nav").toggleClass("small");
-      if ($(".nav").hasClass("small")) {
-        $(".nav").removeClass("small");
-      } else {
-        $(".nav").addClass("small");
-      }
-    });
+
+    // Load Home
+    $("#home").addEventListener('click', function(e) {
+      window.location.href = "..\index.html";
+  }, false);
+
+    $("#arms").addEventListener('click', function(e) {
+      window.location.href = "..\weapons.html";
+  }, false);
+    
   });
   

@@ -13,39 +13,42 @@ html, body {
 /* Main Container for header */
 .headerContainer {  
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: minmax(1fr, auto);
-  grid-template-areas: "navi logo logo";
-  margin-bottom: 20px;
-  border: 1px solid black;
+  grid-template-columns: 320px 1fr 1fr;
+  grid-template-rows:600px, 1fr, 1fr;
+  grid-template-areas: 
+  "navi logo logo"
+  "navi logo logo"
+  "navi scrollingTextBanner scrollingTextBanner";
+  margin-top: 2em;
+  margin-left: 1em;
 }
 
 .logo {
-  border: 1px solid red;
   grid-area: logo;
+  grid-row: 1 / span 2;
+  grid-column: 2 / span 2;
+  justify-self: center;
+  margin-top: 2em;
 }
 
 .navi {
-  border: 1px solid blue;
   grid-area: navi;
+  justify-items: center;
+  min-width: 320px;
+  max-width: 320px;
 }
 
 .navi {
   display: flex;
+  position: fixed;
   align-items: center;
-  background: #2F2F31;
-}
-
-.titleBanner {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  text-align: right;
+  justify-items: center;
 }
 
 /* Logo Controls */
 
 #titleBanner {
+  display: none;
   max-width: 100%;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -53,162 +56,148 @@ html, body {
 }
 
 #mobileBanner {
-  display: none;
+  max-width: 100%;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:auto; /* Resize the background image to cover the entire container */
 }
 
 /* Header Navigation */ 
-
-  
-  
-  #navMenu {
-    top: 150px;
-    left: 200px;
-    width: 140px;
-    height: 140px;
-    z-index: 100;
-    background: linear-gradient(90deg, #80040c, #ca0a37, #680202);
-    -webkit-background: linear-gradient(90deg, #80040c, #ca0a37, #680202);
-    background-size: 400% 400%;
-    -webkit-background-size: 400% 400%;
-    animation: gradient 5s infinite;
-    -webkit-animation: gradient 5s infinite;
-  }
-  
-  #navMenu:hover, .nav:hover {
-    background: #d10303;
-  }
-  
-  @keyframes gradient {
-    50% {
-      background-position: 100% 0;
-    }
-  }
-  @-webkit-keyframes gradient {
-    50% {
-      background-position: 100% 0;
-    }
-  }
-  
-  .diamond {
-    position: absolute;
-    width: 67.5px;
-    height: 67.5px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    background: #c6b1b1;
-    margin: 10px;
-    cursor: pointer;
-    box-shadow: 1px 4px 10px #101010;
-  }
-  
-  .diamond:active {
-    background: #9c1212;
-    box-shadow: 0px 1px 2.5px #101010;
-    transition: 0.1s;
-    -webkit-transition: 0.1s;
-  }
-  
-  .nav {
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-  }
-  
-  .nav1 {
-    top: 86px;
-    left: 287px;
-  }
-  
-  .nav2 {
-    top: 136px;
-    left: 337px;
-  }
-  
-  .nav3 {
-    top: 186px;
-    left: 387px;
-    
-  }
-  
-  .nav4 {
-    top: 236px;
-    left: 337px;
-  }
-  
-  .nav5 {
-    top: 286px;
-    left: 287px;
-  }
-  
-  .small {
-    top: 186px;
-    left: 236px;
-    z-index: 10;
-    background: #e12222;
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-  }
-  
-  .rotCorrect {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    margin-left: 14px;
-    margin-top: 8px;
-  }
-  
-  #mainRotCorrect {
-    margin-left: 26px;
-    margin-top: 28px;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    max-width: 90px;
-  }
-  
-  i {
-    color: #EEEEEE;
-  }
-
-  /* End Header Controls */
-
-/* Main Page Controls */
-.mainPage {  
-  display: grid;
-  grid-template-columns: 0.7fr 1.6fr 0.7fr;
-  grid-template-rows: 0.2fr 1.8fr;
-  grid-auto-columns: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "ScrollingTextBanner ScrollingTextBanner ScrollingTextBanner"
-    "advertAside1 shop advertAside2";
+#navMenu {
+  top: 78px;
+  left:2em;
+  width: 140px;
+  height: 140px;
+  z-index: 100;
+  background: linear-gradient(90deg, #80040c, #ca0a37, #680202);
+  -webkit-background: linear-gradient(90deg, #80040c, #ca0a37, #680202);
+  background-size: 400% 400%;
+  -webkit-background-size: 400% 400%;
+  animation: gradient 5s infinite;
+  -webkit-animation: gradient 5s infinite;
 }
 
-.ScrollingTextBanner { grid-area: ScrollingTextBanner; }
+#navMenu:hover, .nav:hover {
+  background: #d10303;
+}
 
-.advertAside1 { grid-area: advertAside1; }
-
-.advertAside2 { grid-area: advertAside2; }
-
-.shop { grid-area: shop; }
-
-  /* Scrolling Banner controls */
-  .ScrollingTextBanner { 
-    grid-area: ScrollingTextBanner;
-    text-align: center;
-    height: 64px;
-    width: 75%;
-    max-width:95%;
-    white-space:nowrap;
-    margin-bottom: 5px;
-    border: 5px solid rgb(22, 22, 22);
-    border-radius: 25px;
-    justify-content: center;
-    align-content: center;
-    font-size: 30px;
-    color: white;
-    text-shadow: 3px 4px 7px rgba(81,67,21,0.8);
-    overflow: hidden;
-    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+@keyframes gradient {
+  50% {
+    background-position: 100% 0;
   }
+}
+@-webkit-keyframes gradient {
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+.diamond {
+  position: absolute;
+  width: 67.5px;
+  height: 67.5px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  background: #c6b1b1;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 1px 4px 10px #101010;
+}
+
+.diamond:active {
+  background: #9c1212;
+  box-shadow: 0px 1px 2.5px #101010;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+}
+
+.nav {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+
+.nav1 {
+  top: 16px;
+  left: 120px;
+}
+
+.nav2 {
+  top: 66px;
+  left: 170px;
+}
+
+.nav3 {
+  top: 116px;
+  left: 219px;
+  
+}
+
+.nav4 {
+  top: 166px;
+  left: 170px;
+}
+
+.nav5 {
+  top: 216px;
+  left: 120px;
+  text-align: left;
+}
+
+.nav i {
+  color: #101010;  
+}
+
+.small {
+  top: 186px;
+  left: 236px;
+  z-index: 10;
+  background: #e12222;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+
+.rotCorrect {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: 14px;
+  margin-top: 8px;
+}
+
+#mainRotCorrect {
+  margin-left: 26px;
+  margin-top: 28px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  max-width: 90px;
+}
+
+i {
+  color: #EEEEEE;
+}
+
+/* Scrolling Banner controls */
+.ScrollingTextBanner { 
+  grid-area: ScrollingTextBanner;
+  grid-row: 3;
+  grid-column: 2 / span 2;
+  min-width: 85%;
+  max-width: 95%;
+  justify-self: center;
+  text-align: center;
+  max-height: 1.5em;
+  height: 1.5em;
+  white-space:nowrap;
+  margin-bottom: 5px;
+  border: 5px solid rgb(22, 22, 22);
+  border-radius: 25px;
+  justify-content: center;
+  align-content: center;
+  font-size: 30px;
+  color: white;
+  text-shadow: 3px 4px 7px rgba(81,67,21,0.8);
+  overflow: hidden;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
   
 /* Scrolling text banner animation */
 #scroll-text {
@@ -252,96 +241,176 @@ html, body {
   }
 }
 
+  /* End Header Controls */
+
+/* Main Page Controls */
+.mainPage {  
+  display: grid;
+  grid-template-columns: 0.7fr 1.6fr 0.7fr;
+  grid-template-rows: 0.2fr 1.8fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "advertAside1 shop advertAside2"
+    "advertAside1 shop advertAside2"
+    "advertAside1 shop advertAside2"
+    "advertAside1 shop advertAside2";
+  border:#101010 3px solid;
+}
+
+.advertAside1 { 
+  display: grid;
+  grid-auto-columns: 1fr 1fr;
+  grid-auto-rows: 1.4fr .6fr;
+  grid-auto-flow: row;
+  grid-template-areas: 
+  "advert advert"
+  "advertCost advertBuy";
+  grid-area: advertAside1; 
+  grid-row: 1 / span 3;
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: solid 3px black;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.advertAside2 { 
+  grid-area: advertAside2;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr 1fr;
+  grid-auto-flow: row;
+  grid-template-areas: 
+  "advertVideo"
+  "advertVideoStatement";
+  grid-row: 1 / span 3;
+  grid-column: 3;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: solid 3px black;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
  /* Shop area controls */
 .shop {
   display: grid; 
+  grid-row: 1 / span 4;
+  grid-column: 1 / span 3;
+  width: 100%;
+  height: 100%;
   grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 1fr 1fr 1fr; 
+  grid-template-rows: .5fr 2fr .5fr; 
   gap: 0px 0px; 
   grid-template-areas: 
+    ". . ."
     "shopArms shopGear shopPas"
-    "shopArms shopGear shopPas"
-    "faqs faqs faqs"; 
+    ". . .";
   grid-area: shop;
-  flex: 1; 
+  background:url("../images/mainBack.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  border: 3px black solid;
+  border-radius: 25px;
 }
 
 .shopArms {
-  grid-area: shopArms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  grid-row: 2;
+  grid-column: 1;
+  width: 75%;
+  height: 75%;
+  border: 3px solid red;
+  border-radius: 15px;
+  margin-right: 1em;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background-image: url("../images/weaponMenu.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:cover; /* Resize the background image to cover the entire container */
 }
 
 .shopGear {
   grid-area: shopGear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  grid-row: 2;
+  grid-column: 2;
+  width: 75%;
+  height: 75%;
+  border: 3px solid red;
+  border-radius: 15px;
+  margin-right: 1em;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background-image: url("../images/gearMenu.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:cover; /* Resize the background image to cover the entire container */
 }
 
 .shopPas {
   grid-area: shopPas;
-}
-
-.registration {
-  grid-area: registration;
-}
-
-.faqs {
-  grid-area: faqs;
-}
-
-#homeImage {
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/homeNav.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  grid-row: 2;
+  grid-column: 3;
+  width: 75%;
+  height: 75%;
+  border: 3px solid red;
+  border-radius: 15px;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background-image: url("../images/paMenu.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
-  background-size:contain; /* Resize the background image to cover the entire container */
+  background-size:cover; /* Resize the background image to cover the entire container */
 }
 
-#homeImage a {
+.shopArms a {
   color: transparent;
+  text-decoration: none;
 }
 
-#homeImage a:hover {
+.shopArms a:hover {
   color: red;
+  font-size: 1.5em;
   text-shadow: .09ex .09ex azure;
 }
 
-#weaponImage {
-  background-image: url("../images/weaponImage.png");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size:contain; /* Resize the background image to cover the entire container */
-}
-
-#gearImage a {
+.shopGear a {
   color: transparent;
+  text-decoration: none;
 }
 
-#gearImage a:hover {
+.shopGear a:hover {
   color: red;
+  font-size: 1.5em;
   text-shadow: .09ex .09ex azure;
 }
 
-#gearImage {
-  background-image: url("../images/gearNav.png");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size:contain; /* Resize the background image to cover the entire container */
-}
-
-#weaponImage a {
+.shopPas a {
   color: transparent;
+  text-decoration: none;
 }
 
-#weaponImage a:hover {
+.shopPas a:hover {
   color: red;
-  text-shadow: .09ex .09ex azure;
-}
-
-#paImage a {
-  color: transparent;
-}
-
-#paImage a:hover {
-  color: red;
+  font-size: 1.5em;
   text-shadow: .09ex .09ex azure;
 }
 
@@ -352,7 +421,49 @@ html, body {
   background-size:contain; /* Resize the background image to cover the entire container */
 }
 
+/* Advert1 Aside */
+.advert {
+  grid-area: advert;
+  grid-row: 1;
+  grid-column: 1;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  justify-self: center;
+  align-self: center;
+}
 
+.advertCost {
+  grid-area: advertCost;
+  grid-row: 2;
+  grid-column: 1;
+}
 
+.advertBuy {
+  grid-area: advertBuy;
+  grid-row: 3;
+  grid-column: 1;
+}
 
+.advertVideo {
+  grid-row: 1;
+  grid-column: 1;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  justify-self: center;
+  align-self: center;
+}
 
+.advertVideoStatement {
+  grid-row: 2;
+  grid-column: 1;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  justify-self: center;
+  align-self: center;
+}
