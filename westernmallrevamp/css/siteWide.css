@@ -272,7 +272,7 @@ i {
   grid-row: 1 / span 3;
   grid-column: 1;
   width: 100%;
-  height: 100%;
+  height:auto;
   overflow: hidden;
   border: solid 3px black;
   border-radius: 25px;
@@ -283,13 +283,15 @@ i {
 
 .advertAside2 { 
   grid-area: advertAside2;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   grid-row: 1 / span 3;
   grid-column: 3;
   width: 100%;
-  height: 100%;
+  height:auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.3fr .7fr;
+  grid-auto-flow: column;
+  grid-gap: 10px;
   overflow: hidden;
   border-radius: 25px;
   box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -438,12 +440,15 @@ i {
   flex-wrap: wrap;
   justify-self: center;
   align-self: center;
+  
 }
 
 .advertVideo {
   object-fit: contain;
+  grid-column: 1;
+  grid-row: 1;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 90%;
   overflow: hidden;
   justify-self: center;
   align-self: center;
@@ -453,7 +458,9 @@ i {
 }
 
 .advertVideoStatement {
-  object-fit: contain;
+  grid-column: 1;
+  grid-row: 2;
+  object-fit: cover;
   max-width: 100%;
   max-height: 100%;
   overflow: hidden;
