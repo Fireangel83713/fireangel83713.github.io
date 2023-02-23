@@ -50,7 +50,7 @@
       <header class="headerContainer">
           <div class="navi">
               <div id="navMenu" class="diamond">
-                <div id="mainRotCorrect" class="rotCorrect"><i class="fa fa-cubes fa-4x" aria-hidden="true"></i></div>
+                <div id="mainRotCorrect" class="rotCorrect"><i class="fas fa-question fa-4x" aria-hidden="true"></i></div>
               </div>
               <div id="nav1" class="nav nav1 diamond">
                 <a href="index.html"><div class="rotCorrect"><i class="fa fa-home fa-2x" aria-hidden="true"></i></div></a>
@@ -107,24 +107,20 @@
                 </div>
             </a>
             </div>
-            <div class="faqs">
-              <!-- questions content -->
-                <input type="button" class="mainButtons" id="faqs" value="Questions?">
-            </div>
           </div>
 
           <aside class="advertAside1">
             <div class="advert">
               <!-- advert content -->
-              <img src="images\advert1bt.png">
+              <img src="images\advert1bt.jpg">
             </div>
             <div class="advertCost">
               <!-- advertCost content -->
-              <label><b><h3>110,000TU</h3></b></label>
+              <b><h3>10,000TU</h3></b>
             </div>
             <div class="advertBuy">
               <!-- advertBuy content -->
-              <button value="Buy Now"></button>
+              <button id="buyButton">Buy Now</button>
             </div>
         </aside> <!-- End advertAside1 -->
           <aside class="advertAside2">
@@ -141,9 +137,123 @@
           <!-- footer content -->
           <p>Copyright &copy; 2022. All Rights Reserved</p>
         </div>
+        <script src="js/register.js"></script>
+        <script src="js/faqs.js"></script>
     </body>
     
-    <!-- Paste as needed --> <!-- Paste as needed --> <!-- Paste as needed --> <!-- Paste as needed -->
-    <!-- Paste as needed --> <!-- Paste as needed --> <!-- Paste as needed --> <!-- Paste as needed -->
-    <!-- Paste as needed --> <!-- Paste as needed --> <!-- Paste as needed --> <!-- Paste as needed -->
+    <!-- PopUps -->
+    <!--popup registration-->
+    <div class="popup">
+      <div id="wmBannerHolder">
+          <img id="wmBannerReg" src="images\wmBanner.png" alt="A grungy text displaying western mall">
+      </div>
+      <h1>Register for an Account</h1>
+      <form>
+          <div>
+              <label for="email_address">E-Mail:</label>
+              <input type="text" name="email_address" id="email_address">
+              <span>*</span>
+          </div>
+          <div>
+              <label for="phone">Mobile Phone:</label>
+              <input type="text" name="phone" id="phone">
+              <span>*</span>
+          </div>
+          <div>
+              <label for="country">Country:</label>
+              <select name="country" id="country">
+                  <option value="">Select a country</option>
+                  <option style="color:red">USA</option>
+                  <option style="color:green">Canada</option>
+                  <option style="color:yellowgreen">Mexico</option>
+                  <option style="color:purple">japan</option>
+                  <option style="color:peru">China</option>
+                  <option style="color:darkred">Russia</option>
+              </select>
+              <span>*</span>
+          </div>
+          <div class="organize">
+              <label>Contact me by:</label>
+              <div id="radios">
+                  <label><input type="radio" name="contact" id="text"
+                      value="text" checked>Text</label>
+                  <label><input type="radio" name="contact" id="email"
+                      value="email">Email</label>
+                  <label><input type="radio" name="contact" id="mobile"
+                      value="mobile">Cell</label>
+                  <label><input type="radio" name="contact" id="none"
+                      value="none">Do not contact</label>
+                  </div>
+          </div>
+          <div class="organize">
+                  <label>Terms of Service:</label>
+                  <div id="chkBox">
+                  <label><input type="checkbox" name="terms" id="terms"
+                      value="yes">I accept<span>&#160;&#160;*</span></label>
+              </div>
+          </div>
+          <div>
+              <label for="comments">Comments:</label>
+              <textarea name="comments" id="comments" row="5" cols="40"></textarea>
+              <span>*</span>
+          </div>
+          <div>
+              <label>&nbsp;</label>
+              <input type="button" id="register" value="Register">
+              <input type="button" id="reset_form" value="Reset">
+              <input type="button" id="close_form" value="Close">
+          </div>
+
+      </form>
+  </div>
+
+  <div class="confirmed">
+      <div id="wmBannerHolder">
+          <img id="wmBannerReg" src="images\wmBanner.png" alt="A grungy text displaying western mall">
+      </div>
+      <div id="thankYouImage">
+          <img id="thankYouRobot" src="images\thankyou.png" alt="A robot thanking you for registering">
+          <div id="rowFlex">
+              <h1>Thanks for registering with us!</h1>
+              <p>You should get a confirmation email shortly.</p>
+              <label>&nbsp;</label>
+              <input type="button" id="close_form" value="Close">
+          </div>
+      </div>
+  </div>
+
+  <!-- Faqs popup -->
+  <div id="faqs">
+    <h1>WesternMall FAQs</h1>
+      <br>
+      <hr>
+  <h2><a href="#">What is the WesternMall?</a></h2>
+  <div>
+    <p>(OOC) It is a website where players can spend their hard earned Terran Units. All 
+              equipment available in the game will be able to be shopped for here at the 
+              WesternMall website.
+    </p>
+          <p>(IC) It's only the best place to shop for the serious merc. Things that go BOOM, things
+              that keep you from going BOOM, and a few things to make your life easier are all available
+              here at the WesternMall.
+          </p>
+          <p><br><sub><em>*OOC is out of character and IC is In Character</em></sub></p>
+  </div>
+  <h2><a href="#">Why a website?</a></h2>
+  <div>
+    <p>Three reasons:</p>
+    <ul>
+      <li>It's easier than sharing a book.</li>
+      <li>It allows for more items to be added over time without publishing a new book.</li>
+      <li>It adds a lot more immersion to the game.</li>
+    </ul>
+  </div>
+  <h2><a href="#">Do you have a life outside of game designing and developing?</a></h2>
+  <div>
+    <p>No, I do not.
+    </p>
+  </div>
+      <input type="button" id="close_faqs" value="Close">
+      <script src="js/faqs.js"></script>
+  </div>
 </html>

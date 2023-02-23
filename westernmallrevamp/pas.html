@@ -9,76 +9,79 @@
         <meta name="description" content="Western mall for eldrith earth rpg personal assistants page">
         <meta name="keywords" content="rpg ttrpg fantasy scifi cyberpunk">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/siteWide.css" rel="stylesheet" type="text/css">
         <link href="css/paStyle.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/register.css" type="text/css">
+        <link rel="stylesheet" href="css/faqs.css" type="text/css">
+        <script src="https://kit.fontawesome.com/046adaf601.js" crossorigin="anonymous"></script>        <script src="js/register.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     </head>
     <body>
-        <div class="flexContainer">
-            <header> <!--Top Menu-->
-                <div class="flexNav">
-                    <div class="bannerArea" id="bannerRow">
-                        <img id="titleBanner" src="images\wmBanner.png" alt="A grungy text displaying western mall">
-                        <img id="mobileBanner" src="images\wmBannerPort.png" alt="A grungy text displaying western mall">
-                    </div>
-                    <div class="homeIcon" id="bannerRow">
-                        <div id="homeImage">
-                            <a href="index.html" class="active">Home</a>
-                        </div>
-                    </div>
-                    <div class="armsIcon" id="bannerRow">
-                        <div id="weaponImage">
-                            <a href="weapons.html">Arms</a>
-                        </div>
-                    </div>
-                    <div class="gearIcon" id="bannerRow">
-                        <div id="gearImage">
-                            <a href="gear.html">Gear</a>
-                        </div>
-                    </div>
-                    <div class="paIcon" id="bannerRow">
-                        <div id="paImage">
-                            <a href="pas.html">PAs</a>
-                        </div>
-                    </div>
-                  </div>
-        </header>
-        <div id="scrollingTextBanner">
+      <!-- Page navigation -->
+      <header class="headerContainer">
+        <div class="navi">
+            <div id="navMenu" class="diamond">
+              <div id="mainRotCorrect" class="rotCorrect"><i class="fas fa-question fa-4x" aria-hidden="true"></i></div>
+            </div>
+            <div id="nav1" class="nav nav1 diamond">
+              <a href="index.html"><div class="rotCorrect"><i class="fa fa-home fa-2x" aria-hidden="true"></i></div></a>
+            </div>
+            <div id="nav2" class="nav nav2 diamond">
+              <a href="weapons.html"><div class="rotCorrect"><i class="fa-solid fa-gun fa-2x" aria-hidden="true"></i></div></a>
+            </div>
+            <div id="nav3" class="nav nav3 diamond">
+              <div class="rotCorrect"><i class="fas fa-user fa-2x" aria-hidden="true"></i>
+            </div>
+            </div>
+            <div id="nav4" class="nav nav4 diamond">
+              <a href="gear.html"><div class="rotCorrect"><i class="fas fa-vest fa-2x" aria-hidden="true"></i></div></a>
+            </div>
+            <div id="nav5" class="nav nav5 diamond">
+              <a href="pas.html"><div class="rotCorrect"><i class="fas fa-robot fa-2x" aria-hidden="true"></i></div></a>
+            </div>
+          </div>
+          <div class="logo">
+            <!-- titleBanner content -->
+            <img id="titleBanner" src="images\wmBanner.png" alt="A grungy text displaying western mall">
+            <img id="mobileBanner" src="images\wmBannerPort.png" alt="A grungy text displaying western mall">
+          </div>
+          <div class="ScrollingTextBanner">
+            <!-- ScrollingTextBanner content -->
             <div id="scroll-text"><script src="js\messagesScript.js"></script></div>
-        </div>
-        <div class="advert"><img src="images\advert.png"></div>
-        <div class="advert2"><img src="images\advert.png"></div>
+          </div>
+        </header>
 
         <!--Main body container for formatting page background-->
         <section class="mainBody">
             <!--Shop Menu Items, images provided by CSS-->
             <section class="paCatalogue">
                 <a href="pa1.html">
-                    <div id="pa1">
+                    <div id="pa1" class="pa">
                         <div class="paLink"><h2>lil' Buddy&#8482;</h2></div>
                     </div>
                 </a>
                 <a href="pa2.html">
-                    <div id="pa2">
+                    <div id="pa2" class="pa">
                         <div class="paLink"><h2>TinHead&#8482;</h2></div>
                     </div>
                 </a>
                 <a href="pa3.html">
-                    <div id="pa3">
+                    <div id="pa3" class="pa">
                         <div class="paLink"><h2>Synergy&#8482;</h2></div>
                     </div>
                 </a>
                 <a href="pa4.html">
-                    <div id="pa4">
+                    <div id="pa4" class="pa">
                         <div class="paLink"><h2>I-Spy&#8482;</h2></div>
                     </div>
                 </a>
                 <a href="pa5.html">
-                    <div id="pa5">
+                    <div id="pa5" class="pa">
                         <div class="paLink"><h2>Hal&#8482;</h2></div>
                     </div>
                 </a>
                 <a href="pa6.html">
-                    <div id="pa6">
+                    <div id="pa6" class="pa">
                         <div class="paLink"><h2>Marvin&#8482;</h2></div>
                     </div>
                 </a>

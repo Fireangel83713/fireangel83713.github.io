@@ -126,10 +126,10 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#close_form").addEventListener("click", function(){
         document.querySelector(".popup").style.display = "none";
     });
-    $("#registration").addEventListener("click", function(){
+    $("#nav3").addEventListener("click", function(){
         document.querySelector(".popup").style.display = "block";
     });
-    $("#questions").addEventListener("click", function(){
+    $("#navMenu").addEventListener("click", function(){
         document.querySelector("#faqs").style.display = "block";
     });
     $("#close_faqs").addEventListener("click", function(){
