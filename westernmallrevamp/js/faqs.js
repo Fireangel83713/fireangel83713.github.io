@@ -1,36 +1,30 @@
 "use strict";
 
-// the event handler for the click event of each <a> element
-const toggle = evt => {
-    const linkElement = evt.currentTarget;                 // get the clicked link element
-    const h2Element = linkElement.parentNode;              // get the h2 tag for the <a> tag
-    const divElement = h2Element.nextElementSibling;       // get h2's sibling div
+$(document).ready(() => {
+	// runs when an h2 heading is clicked
+	$("#faqs h2").click((evt) => {
+		const h2 = evt.currentTarget;
 
-    // h2Element.classList.toggle("minus");
-    if (h2Element.hasAttribute("class")) {
-        h2Element.removeAttribute("class");
-    } else {
-        h2Element.className="minus";
-    }
+		$(h2).toggleClass("minus");
 
-    // divElement.classList.toggle("open");
-    if (divElement.hasAttribute("class")) {
-        divElement.removeAttribute("class");
-    } else {
-        divElement.className="open";
-    }
+		if ($(h2).attr("class") != "minus") {
+			$(h2).next().slideUp(1000, "easeInBounce");
+		} else {
+			$(h2).next().slideDown(2000, "easeOutBounce");
+		}
 
-    evt.preventDefault();   // cancel default action of the <a> tag
-};
+		evt.preventDefault();
+	}); // end click
 
-document.addEventListener("DOMContentLoaded", () => {
-    // get the <a> tags
-    const linkElements = faqs.querySelectorAll("#faqs a");
-    
-    // attach event handler for each <a> tag	    
-    for (let linkElement of linkElements) {
-        linkElement.addEventListener("click", toggle);
-    }
-    // set focus on first <a> tag
-    linkElements[0].focus();       
-});
+	// runs when the page is ready
+	$("#faqs h1")
+		.animate({ fontSize: "250%", opacity: 1, left: "+=375" }, 1000)
+		.animate({ fontSize: "175%", left: "0" }, 1000);
+
+	// runs when the top-level heading is clicked
+	$("#faqs h1").click(() => {
+		$("#faqs h1")
+			.animate({ fontSize: "250%", opacity: 1, left: "+=375" }, 2000)
+			.animate({ fontSize: "175%", left: "0" }, 1000);
+	}); // end click
+}); // end ready

@@ -93,3 +93,11 @@
     padding-bottom: .25em;
     padding-left: 25px;
 }
+
+#faqs h1 { 
+	position: relative;
+	left: -175px;
+	font-size: 75%;
+	opacity: .2;
+	color: blue;
+}
