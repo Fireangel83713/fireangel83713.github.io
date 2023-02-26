@@ -50,6 +50,55 @@
               </div>
             </header>
   
+                      <!-- Mobile and Smaller Screen Header for Logo Banner and Navigation-->
+          <header class="headerMobile">
+            <!-- Mobile and Smaller Screen Logo-->
+              <div class="mobileLogo">
+                <img src="images\wmBannerPort.png" alt="Western mall in grungy lettering">
+              </div>
+  
+            <!-- Mobile Navigation Menu -->
+              <nav class="mobileNav">
+              <!-- Home Icon Menu Item for Mobile Nav -->
+                <div class="homeIcon">
+                  <div id="homeImage" class="navRow">
+                      <a href="index.html" class="active">Home</a>
+                  </div>
+                </div>
+  
+              <!-- Arms Icon Menu Item for Mobile Nav -->
+                <div class="armsIcon">
+                    <div id="weaponImage" class="navRow">
+                        <a href="weapons.html">Arms</a>
+                    </div>
+                </div>
+                
+              <!-- Gear Icon Menu Item for Mobile Nav -->
+                <div class="gearIcon">
+                    <div id="gearImage" class="navRow">
+                        <a href="gear.html">Gear</a>
+                    </div>
+                </div>
+                
+              <!-- Personal Assistant Icon Menu Item for Mobile Nav -->
+                <div class="paIcon">
+                    <div id="paImage" class="navRow">
+                        <a href="pas.html">PAs</a>
+                    </div>
+                </div>
+                
+                <!-- FAQs Menu Item for Mobile Nav -->
+                <div class="faqsButton">
+                  <button class="navButton" id="faqsButton">FAQs</button>
+                </div>
+  
+                <!-- Registration Menu Item for Mobile Nav -->
+                <div class="regButton">
+                  <button class="navButton" id="regButton">Register</button>
+                </div>
+              </nav>
+            </header>
+
           <secton class="mainPage">
             <div class="shop">
               <!-- shop content -->
@@ -105,7 +154,7 @@
           </secton>
           <div class="footer">
             <!-- footer content -->
-            <p>Copyright &copy; 2022. All Rights Reserved</p>
+            <p>Copyright &copy; 2023. All Rights Reserved</p>
           </div>
           <script src="js/register.js"></script>
           <script src="js/faqs.js"></script>
@@ -191,38 +240,46 @@
         </div>
     </div>
   
-    <!-- Faqs popup -->
-    <div id="faqs">
-      <h1>WesternMall FAQs</h1>
-        <br>
-        <hr>
-    <h2><a href="#">What is the WesternMall?</a></h2>
-    <div>
-      <p>(OOC) It is a website where players can spend their hard earned Terran Units. All 
-                equipment available in the game will be able to be shopped for here at the 
-                WesternMall website.
-      </p>
-            <p>(IC) It's only the best place to shop for the serious merc. Things that go BOOM, things
-                that keep you from going BOOM, and a few things to make your life easier are all available
-                here at the WesternMall.
-            </p>
-            <p><br><sub><em>*OOC is out of character and IC is In Character</em></sub></p>
-    </div>
-    <h2><a href="#">Why a website?</a></h2>
-    <div>
-      <p>Three reasons:</p>
-      <ul>
-        <li>It's easier than sharing a book.</li>
-        <li>It allows for more items to be added over time without publishing a new book.</li>
-        <li>It adds a lot more immersion to the game.</li>
+  <!-- Faqs popup -->
+  <div id="faqs">
+    <h1>WesternMall FAQs</h1>
+      <br>
+      <hr>
+      <ul id="faq_rollovers">
+        <li>
+          <h2>What is the WesternMall?</h2>
+            <p class="hidden">(OOC) It is a website where players can spend their hard earned Terran Units. All 
+              equipment available in the game will be able to be shopped for here at the 
+              WesternMall website.<br><br>
+    
+              (IC) It's only the best place to shop for the serious merc. Things that go BOOM, things
+              that keep you from going BOOM, and a few things to make your life easier are all available
+              here at the WesternMall.
+              <br>
+              <br><sub><em>*OOC is out of character and IC is In Character</em></sub></p>
+        </li>
+        <li>
+          <h2>Why a website?</h2>
+          <p class="hidden">Three reasons:<br><br>
+    
+              It's easier than sharing a book.<br>
+              It allows for more items to be added over time without publishing a new book.<br>
+              It adds a lot more immersion to the game.<br>
+          </p>
+        </li>
+        <li>
+          <h2>Do you have a life outside of game designing and developing?</h2>
+          <p class="hidden">No, I do not.
+          </p>
+        </li>
+        <li>
+          <h2>What are the future plans for this site?</h2>
+          <p class="hidden">A lot more items, character accounts with GM access to award TU for characters to spend, 
+            and shipping manifests to be sent to player email to prove they purchased the items.
+          </p>
+        </li>
       </ul>
-    </div>
-    <h2><a href="#">Do you have a life outside of game designing and developing?</a></h2>
-    <div>
-      <p>No, I do not.
-      </p>
-    </div>
-        <input type="button" id="close_faqs" value="Close">
-        <script src="js/faqs.js"></script>
-    </div>
+          <input type="button" id="close_faqs" value="Close">
+      <script src="js/faqs.js"></script>
+  </div>
 </html>

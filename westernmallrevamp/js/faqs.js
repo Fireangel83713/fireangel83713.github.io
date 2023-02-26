@@ -1,30 +1,15 @@
 "use strict";
 
-$(document).ready(() => {
-	// runs when an h2 heading is clicked
-	$("#faqs h2").click((evt) => {
-		const h2 = evt.currentTarget;
+jQuery.noConflict();
 
-		$(h2).toggleClass("minus");
+jQuery(document).ready(() => {
+    // On mouseover show hidden css element
+    jQuery("#faq_rollovers li h2").mouseover(function () {
+        jQuery(this).next(".hidden").show();
+    });
 
-		if ($(h2).attr("class") != "minus") {
-			$(h2).next().slideUp(1000, "easeInBounce");
-		} else {
-			$(h2).next().slideDown(2000, "easeOutBounce");
-		}
-
-		evt.preventDefault();
-	}); // end click
-
-	// runs when the page is ready
-	$("#faqs h1")
-		.animate({ fontSize: "250%", opacity: 1, left: "+=375" }, 1000)
-		.animate({ fontSize: "175%", left: "0" }, 1000);
-
-	// runs when the top-level heading is clicked
-	$("#faqs h1").click(() => {
-		$("#faqs h1")
-			.animate({ fontSize: "250%", opacity: 1, left: "+=375" }, 2000)
-			.animate({ fontSize: "175%", left: "0" }, 1000);
-	}); // end click
-}); // end ready
+    // On mouseout rehide it
+    jQuery("#faq_rollovers li h2").mouseout(function () {
+        jQuery(this).next(".hidden").hide();
+    });
+});

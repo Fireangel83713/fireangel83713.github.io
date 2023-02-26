@@ -135,5 +135,11 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#close_faqs").addEventListener("click", function(){
         document.querySelector("#faqs").style.display = "none";
     });
+    $("#faqsButton").addEventListener("click", function(){
+        document.querySelector("#faqs").style.display = "block";
+    });
+    $("#regButton").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "block";
+    });
 });
 
