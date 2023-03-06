@@ -1,0 +1,962 @@
+
+/* General Site Controls */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: rgb(228,4,20);
+  background: radial-gradient(circle, rgba(228,4,20,1) 0%, rgba(148,187,233,1) 100%);
+
+}
+
+/* Main Container for header */
+.headerContainer {  
+  display: grid;
+  grid-template-columns: 320px 1fr 1fr;
+  grid-template-rows:600px, 1fr, 1fr;
+  grid-template-areas: 
+  "navi logo logo"
+  "navi logo logo"
+  "navi scrollingTextBanner scrollingTextBanner";
+  margin-top: 2em;
+  margin-left: 1em;
+  margin-bottom: 6em;
+}
+
+.headerMobile {
+  display: none;
+}
+
+.logo {
+  grid-area: logo;
+  grid-row: 1 / span 2;
+  grid-column: 2 / span 2;
+  justify-self: center;
+  margin-top: 2em;
+}
+
+.navi {
+  grid-area: navi;
+  justify-items: center;
+  min-width: 320px;
+  max-width: 320px;
+}
+
+.navi {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Logo Controls */
+
+#titleBanner {
+  display: none;
+  max-width: 100%;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:auto; /* Resize the background image to cover the entire container */
+}
+
+#mobileBanner {
+  max-width: 100%;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:auto; /* Resize the background image to cover the entire container */
+}
+
+/* Header Navigation */ 
+#navMenu {
+  top: 78px;
+  left:2em;
+  width: 140px;
+  height: 140px;
+  z-index: 100;
+  background: linear-gradient(90deg, #80040c, #ca0a37, #680202);
+  -webkit-background: linear-gradient(90deg, #80040c, #ca0a37, #680202);
+  background-size: 400% 400%;
+  -webkit-background-size: 400% 400%;
+  animation: gradient 5s infinite;
+  -webkit-animation: gradient 5s infinite;
+}
+
+#navMenu:hover, .nav:hover {
+  background: #d10303;
+}
+
+@keyframes gradient {
+  50% {
+    background-position: 100% 0;
+  }
+}
+@-webkit-keyframes gradient {
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+.diamond {
+  position: absolute;
+  width: 67.5px;
+  height: 67.5px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  background: #c6b1b1;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 1px 4px 10px #101010;
+}
+
+.diamond:active {
+  background: #9c1212;
+  box-shadow: 0px 1px 2.5px #101010;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+}
+
+.nav {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+
+.nav1 {
+  top: 16px;
+  left: 120px;
+}
+
+.nav2 {
+  top: 66px;
+  left: 170px;
+}
+
+.nav3 {
+  top: 116px;
+  left: 219px;
+  
+}
+
+.nav4 {
+  top: 166px;
+  left: 170px;
+}
+
+.nav5 {
+  top: 216px;
+  left: 120px;
+  text-align: left;
+}
+
+.nav i {
+  color: #101010;  
+}
+
+.small {
+  top: 186px;
+  left: 236px;
+  z-index: 10;
+  background: #e12222;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+
+.rotCorrect {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+
+  margin-left: 12px;
+  margin-top: 9px;
+}
+
+#mainRotCorrect {
+  margin-left: 45px;
+  margin-top: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  max-width: 90px;
+  align-self: center;
+  justify-self: center;
+
+}
+
+i {
+  color: #EEEEEE;
+}
+
+/* Scrolling Banner controls */
+.ScrollingTextBanner { 
+  grid-area: ScrollingTextBanner;
+  grid-row: 3;
+  grid-column: 2 / span 2;
+  min-width: 85%;
+  max-width: 95%;
+  justify-self: center;
+  text-align: center;
+  max-height: 1.5em;
+  height: 1.5em;
+  white-space:nowrap;
+  margin-bottom: 5px;
+  border: 5px solid rgb(22, 22, 22);
+  border-radius: 25px;
+  justify-content: center;
+  align-content: center;
+  font-size: 30px;
+  color: white;
+  text-shadow: 3px 4px 7px rgba(81,67,21,0.8);
+  overflow: hidden;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+  
+/* Scrolling text banner animation */
+#scroll-text {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  margin: 0;
+
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: my-animation 20s linear infinite;
+  -webkit-animation: my-animation 20s linear infinite;
+  animation: my-animation 20s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+  /* End Header Controls */
+
+/* Main Page Controls */
+.mainPage {  
+  display: grid;
+  grid-template-columns: 0.7fr 1.6fr 0.7fr;
+  grid-template-rows: 0.2fr 1.8fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "advertAside1 shop advertAside2"
+    "advertAside1 shop advertAside2"
+    "advertAside1 shop advertAside2"
+    "advertAside1 shop advertAside2";
+  max-height: 75vh;
+  margin-top: 3em;
+}
+
+.advertAside1 { 
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  grid-area: advertAside1; 
+  grid-row: 1 / span 3;
+  grid-column: 1;
+  width: 100%;
+  height:auto;
+  overflow: hidden;
+  border: solid 3px black;
+  border-radius: 25px;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  justify-content: center;
+  align-items: center;
+}
+
+.advertAside2 { 
+  grid-area: advertAside2;
+  grid-row: 1 / span 3;
+  grid-column: 3;
+  width: 100%;
+  height:auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.3fr .7fr;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+ /* Shop area controls */
+.shop {
+  display: flex;
+  flex-direction: column; 
+  width: 80%;
+  height: 100%;
+  grid-area: shop;
+  background:url("../images/mainBack.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  overflow: hidden;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  border: 3px black solid;
+  border-radius: 25px;
+}
+
+.shopArms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  width: 10em;
+  height: 10em;
+  border: 3px solid red;
+  border-radius: 15px;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background-image: url("../images/weaponMenu.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:cover; /* Resize the background image to cover the entire container */
+}
+
+.shopGear {
+  grid-area: shopGear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  width: 10em;
+  height: 10em;
+  border: 3px solid red;
+  border-radius: 15px;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background-image: url("../images/gearMenu.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:cover; /* Resize the background image to cover the entire container */
+}
+
+.shopPas {
+  grid-area: shopPas;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  width: 10em;
+  height: 10em;
+  border: 3px solid red;
+  border-radius: 15px;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background-image: url("../images/paMenu.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:cover; /* Resize the background image to cover the entire container */
+}
+
+.shopArms a {
+  color: transparent;
+  text-decoration: none;
+}
+
+.shopArms a:hover {
+  color: red;
+  font-size: 1.5em;
+  text-shadow: .09ex .09ex azure;
+}
+
+.shopGear a {
+  color: transparent;
+  text-decoration: none;
+}
+
+.shopGear a:hover {
+  color: red;
+  font-size: 1.5em;
+  text-shadow: .09ex .09ex azure;
+}
+
+.shopPas a {
+  color: transparent;
+  text-decoration: none;
+}
+
+.shopPas a:hover {
+  color: red;
+  font-size: 1.5em;
+  text-shadow: .09ex .09ex azure;
+}
+
+
+
+#buyButton {
+  background-color: #070707;
+  color: #e12222;
+  border: 3px solid red;
+  border-radius: 15px;
+  height: 30px;
+  width: 100px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#buyButton:hover {
+  background-color: red;
+  color: black;
+}
+
+#paImage {
+  background-image: url("../images/paNav.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:contain; /* Resize the background image to cover the entire container */
+}
+
+#paImage a {
+  color: transparent;
+}
+
+#paImage a:hover {
+  font-size: 2em;
+  -webkit-text-stroke: 1px rgb(253, 251, 251);
+  color: rgb(0, 3, 8);
+  text-shadow: .09ex .09ex azure;
+}
+
+#homeImage {
+  background-image: url("../images/homeNav.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:contain; /* Resize the background image to cover the entire container */
+}
+
+#homeImage a {
+  color: transparent;
+}
+
+#homeImage a:hover {
+  font-size: 2em;
+  -webkit-text-stroke: 1px rgb(253, 251, 251);
+  color: rgb(0, 3, 8);
+  text-shadow: .09ex .09ex azure;
+}
+
+#weaponImage {
+  background-image: url("../images/weaponImage.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:contain; /* Resize the background image to cover the entire container */
+}
+
+#weaponImage a {
+  color: transparent;
+}
+
+#weaponImage a:hover {
+  font-size: 2em;
+  -webkit-text-stroke: 1px rgb(253, 251, 251);
+  color: rgb(0, 3, 8);
+  text-shadow: .09ex .09ex azure;
+}
+
+#gearImage {
+  background-image: url("../images/gearNav.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size:contain; /* Resize the background image to cover the entire container */
+}
+
+#gearImage a {
+  color: transparent;
+}
+
+#gearImage a:hover {
+  font-size: 2em;
+  -webkit-text-stroke: 1px rgb(253, 251, 251);
+  color: rgb(0, 3, 8);
+  text-shadow: .09ex .09ex azure;
+}
+
+/*------------------------------------------
+  Responsive Grid Media Queries - 1280, 1024, 768, 480
+   1280-1024   - desktop (default grid)
+   1024-768    - tablet landscape
+   768-480     - tablet 
+   480-less    - phone landscape & smaller
+--------------------------------------------*/
+@media all and (min-width: 1024px) and (max-width: 1280px) { 
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) { 
+  .headerContainer{
+    display: none;
+  }
+
+  .headerMobile {
+    display: block;
+  }
+
+  .headerMobile img {
+    width: 500px;
+    background-size: cover;
+    background-position: center;
+    margin-left: 2em;
+  }
+
+  .headerMobile {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .mobileNav {
+    display:grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr .5fr;
+    grid-auto-flow: row;
+    justify-items: center;
+  }
+
+  .navRow {
+    display: flex;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+
+  .navRow a{
+    text-decoration: none;
+  }
+
+  .homeIcon {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .armsIcon {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .gearIcon {
+    grid-row: 1;
+    grid-column: 3;
+  }
+
+  .paIcon {
+    grid-row: 1;
+    grid-column: 4;
+  }
+
+  .navButton {
+    border-radius: 15px;
+    height: 20px;
+    width: 90px;
+    font-size: .7rem;
+    font-weight: bold;
+    background-color: #070707;
+    color: #e12222;
+    border: 3px solid red;
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+
+  #faqsButton:hover {
+    background-color: red;
+    color: black;
+    border: 3px solid black;
+  }
+
+  #regButton:hover {
+    background-color: red;
+    color: black;
+    border: 3px solid black;
+  }
+
+  .faqsButton {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .regButton {
+    grid-row: 2;
+    grid-column: 3;
+  }
+
+  /* Advert1 Aside */
+.advert {
+  display: flex;
+  height: 80%;
+  width: 100%;
+  background-size: cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  border-bottom: black 3px solid;
+  margin-bottom: .5em;
+  padding-top: 0;
+  margin-top: -.6em;
+}
+
+.advertCost {
+  width: 80px;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+  margin-right: 1em;
+  background: transparent;
+  color: rgb(12, 0, 0);
+  border: none;
+}
+
+.advertBuy {
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  align-self: center;
+  
+}
+
+.advertVideo {
+  object-fit: contain;
+  grid-column: 1;
+  grid-row: 1;
+  max-width: 100%;
+  max-height: 90%;
+  overflow: hidden;
+  justify-self: center;
+  align-self: center;
+  border: solid 3px black;
+  border-radius: 25px;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.advertVideoStatement {
+  grid-column: 1;
+  grid-row: 2;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  justify-self: center;
+  align-self: center;
+  border: solid 3px black;
+  border-radius: 25px;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#buyButton {
+  background-color: #070707;
+  color: #e12222;
+  border: 3px solid red;
+  border-radius: 15px;
+  height: 20px;
+  width: 90px;
+  font-size: .7rem;
+  font-weight: bold;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.advertVideoStatement {
+  grid-column: 1;
+  grid-row: 2;
+  background-size: cover;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  justify-self: center;
+  align-self: center;
+  border: solid 3px black;
+  border-radius: 25px;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+}
+
+@media all and (max-width: 480px) { 
+  .headerContainer{
+    display: none;
+  }
+
+  .headerMobile {
+    display: block;
+    justify-content: center;
+  }
+
+  .headerMobile {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .mobileNav {
+    display:grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: row;
+    justify-items: center;
+  }
+
+  .navRow {
+    display: flex;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+
+  .navRow a{
+    text-decoration: none;
+  }
+
+  .homeIcon {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .armsIcon {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .gearIcon {
+    grid-row: 1;
+    grid-column: 3;
+  }
+
+  .paIcon {
+    grid-row: 1;
+    grid-column: 4;
+  }
+
+
+  .faqsButton {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .regButton {
+    grid-row: 2;
+    grid-column: 3;
+  }
+  
+  .navButton {
+    background-color: #070707;
+    color: #e12222;
+    border: 3px solid red;
+    border-radius: 15px;
+    height: 20px;
+    width: 90px;
+    font-size: .7rem;
+    font-weight: bold;
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+
+  
+  #faqsButton:hover {
+    background-color: red;
+    color: black;
+    border: 3px solid black;
+  }
+
+  #regButton:hover {
+    background-color: red;
+    color: black;
+    border: 3px solid black;
+  }
+  
+  .headerMobile img {
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+    margin-left: 2em;
+  }
+
+  .navRow {
+    display: flex;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+
+  .navRow a{
+    text-decoration: none;
+  }
+
+  .homeIcon {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .armsIcon {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .gearIcon {
+    grid-row: 1;
+    grid-column: 3;
+  }
+
+  .paIcon {
+    grid-row: 1;
+    grid-column: 4;
+  }
+
+  /* Advert1 Aside */
+.advert {
+  display: flex;
+  height: 80%;
+  width: 100%;
+  background-size: cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  border-bottom: black 3px solid;
+  margin-bottom: .5em;
+  padding-top: 0;
+  margin-top: -.6em;
+}
+
+.advertCost {
+  width: 80px;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+  margin-right: 1em;
+  background: transparent;
+  color: rgb(12, 0, 0);
+  border: none;
+}
+
+.advertBuy {
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  align-self: center;
+  
+}
+
+.advertVideo {
+  object-fit: contain;
+  grid-column: 1;
+  grid-row: 1;
+  max-width: 100%;
+  max-height: 90%;
+  overflow: hidden;
+  justify-self: center;
+  align-self: center;
+  border: solid 3px black;
+  border-radius: 25px;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.advertVideoStatement {
+  grid-column: 1;
+  grid-row: 2;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  justify-self: center;
+  align-self: center;
+  border: solid 3px black;
+  border-radius: 25px;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#buyButton {
+  background-color: #070707;
+  color: #e12222;
+  border: 3px solid red;
+  border-radius: 15px;
+  height: 20px;
+  width: 90px;
+  font-size: .7rem;
+  font-weight: bold;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.advertVideoStatement {
+  grid-column: 1;
+  grid-row: 2;
+  background-size: cover;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  justify-self: center;
+  align-self: center;
+  border: solid 3px black;
+  border-radius: 25px;
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+}
+
+
+/* Portrait */
+@media screen and (orientation:portrait) { /* Portrait styles here */ }
+/* Landscape */
+@media screen and (orientation:landscape) { /* Landscape styles here */ }
+
+
+/* CSS for iPhone, iPad, and Retina Displays */
+
+/* Non-Retina */
+@media screen and (-webkit-max-device-pixel-ratio: 1) {
+}
+
+/* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+}
+
+/* iPhone Portrait */
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+} 
+
+/* iPhone Landscape */
+@media screen and (max-device-width: 480px) and (orientation:landscape) {
+}
+
+/* iPad Portrait */
+@media screen and (min-device-width: 481px) and (orientation:portrait) {
+}
+
+/* iPad Landscape */
+@media screen and (min-device-width: 481px) and (orientation:landscape) {
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- Michael Jewett
+    01/23/2023 -->
+<html lang="en">
+    <head>
+        <title>WesternMall - Personal Assistants - Lil' Buddy™</title>
+        <meta name="author" content="Michael Jewett">
+        <meta charset="UTF-8">
+        <meta name="description" content="Western mall for eldrith earth rpg Personal Assistants Lil' Buddy page">
+        <meta name="keywords" content="rpg ttrpg fantasy scifi cyberpunk">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/siteWide.css" type="text/css">
+        <link href="css/paStyle.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/shopStyle.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" type="text/css">
+        <script type="text/javascript" src="js/jqueryui/jquery-3.6.3.min.js"></script>
+        <script type="text/javascript" src="js/jqueryui/jquery-ui.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>  
+        <script type="text/javascript" src="js/shop.js"></script>    
+        <script
+        defer
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/@vime/core@^5/dist/vime/vime.esm.js"
+      ></script>
+      <script src="js\paCarousel.js"></script>
+      <body>
+        <div class="shopWrapper">
+            <header class="fullHeader">
+                <div class="logoHeader">
+                  <!-- titleBanner content -->
+                  <img src="\images\wmBannerProto.png" alt="A grungy text displaying western mall">
+                </div>
+                <div class="ScrollingTextBanner">
+                  <!-- ScrollingTextBanner content -->
+                  <div id="scroll-text"><script src="js/messagesScript.js"></script>
+                  </div>
+              </div>
+            </header>
+            <main class="shopMain">
+                
+            <aside class="shopLeft">
+            <!-- Left sidebar -->
+            <fieldset>
+                <label for="pages">Navigate to:</label>
+                <select id="pages">
+                  <option value="index.html">Home - WesternMall Main Page</option>
+                  <option value="weapons.html">Arms - The Weapons You Want</option>
+                  <option value="gear.html">Gear - The Gear You Need</option>
+                  <option value="pas.html">PAs - Choose A Personal Assistant</option>
+                  <option>---------</option>
+                  <option value="faqs">FAQs - General QUestions</option>
+                  <option value="register">Register - Create An Account</option>
+                </select>
+            </fieldset>
+            <h2 id="advertHead">On Sale Now!</h2>
+            <div class="my-slider">
+                <div class="item"><img src="images/battleLauncher.jpg" /></div>
+                <div class="item"><img src="images/blasters.jpg" /></div>
+                <div class="item"><img src="images/hers-laserRifle.jpg" /></div>
+                <div class="item"><img src="images/hoverTank.jpg" /></div>
+            </div>
+
+            </aside>
+    
+            <!-- Main content -->
+            <article class="shopMiddle">
+              <!--Main body container for formatting page background-->
+              <section class="mainBody">
+                <!--Shop Menu Items, images provided by CSS-->
+                <section class="paCatalogue">
+                  <section class="slider-wrapper">
+                    <button class="slide-arrow" id="slide-arrow-next">
+                      &#8250;
+                    </button>
+                    <button class="slide-arrow" id="slide-arrow-prev">
+                      &#8249;
+                    </button>                
+                    <ul class="slides-container" id="slides-container">
+                      <li class="slide"><a href="pa1.html"><img src="images/lilBuddyCarousel.png" alt="lil' Buddy"></a></li>
+                      <li class="slide"><a href="pa2.html"><img src="images/tinHeadCarousel.png" alt="TinHead"></a></li>
+                      <li class="slide"><a href="pa3.html"><img src="images/synergyCarousel.png" alt="Synergy"></a></li>
+                      <li class="slide"><a href="pa4.html"><img src="images/iSpyCarousel.png" alt="I-Spy"></a></li>
+                      <li class="slide"><a href="pa5.html"><img src="images/halCarousel.png" alt="Hal"></a></li>
+                      <li class="slide"><a href="pa6.html"><img src="images/marvinCarousel.png" alt="Marvin"></a></li>
+                    </ul>
+                  </section>
+                </section>
+            </section>
+                </article>
+    
+            <!-- Right sidebar -->
+            <aside class="shopRight">
+                <div id="container">
+                    <vm-player playsinline>
+                        <vm-player controls>
+                            <vm-youtube video-id="HkPk-uVWLMY"></vm-youtube>
+                            <!-- ... -->
+                          </vm-player>
+                      <vm-default-ui></vm-default-ui>
+                    </vm-player>
+                  </div>
+
+                    <div class="advertAside2">
+                      <!-- advertVideoStatement content -->
+                      <img src="images/prepared.jpg">            
+                    </div>
+                    </aside>
+        </main> <!-- End shopMain -->
+        <footer>
+            <div class="footer">
+                <!-- footer content -->
+                <p>Copyright &copy; 2023. All Rights Reserved</p>
+            </div>
+        </footer>
+        </div> <!-- End shopWrapper -->
+
+    </body>
+</html>

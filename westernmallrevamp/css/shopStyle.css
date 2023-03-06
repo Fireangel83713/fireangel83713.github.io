@@ -1,0 +1,74 @@
+.shopWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.shopMain {
+    /* Take the remaining height */
+    flex-grow: 1;
+
+    /* Layout the left sidebar, main content and right sidebar */
+    display: flex;
+    flex-direction: row;
+}
+
+.shopLeft {
+    display: grid;
+    width: 25%;
+    justify-content: center;
+}
+
+.shopLeft i {
+    padding-right: 5px;
+}
+
+.shopLeft li {
+    list-style: none;
+}
+
+.shopLeft a:hover {
+    background-color: red;
+    color: black;
+}
+.shopLeft hr {
+    width: 50%;
+}
+.shopLeft a {
+    text-decoration: none;
+}
+
+.shopMiddle {
+    /* Take the remaining width */
+    flex-grow: 1;
+}
+
+.shopRight {
+    width: 20%;
+}
+
+.ui-menu { 
+    width: 150px; 
+}
+
+/* select with custom icons */
+.ui-selectmenu-menu .ui-menu.customicons .ui-menu-item-wrapper {
+    padding: 0.5em 0 0.5em 3em;
+    }
+
+    .ui-selectmenu-menu .ui-menu.customicons .ui-menu-item .ui-icon {
+    height: 24px;
+    width: 24px;
+    top: 0.1em;
+}
+
+.ui-icon.video {
+    background: url("images/24-video-square.png") 0 0 no-repeat;
+}
+
+.ui-icon.podcast {
+    background: url("images/24-podcast-square.png") 0 0 no-repeat;
+}
+
+.ui-icon.rss {
+    background: url("images/24-rss-square.png") 0 0 no-repeat;
+}
