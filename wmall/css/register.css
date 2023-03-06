@@ -1,9 +1,13 @@
+.shopMiddle {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
 .popup {
-    display: none;
-	position: absolute;
-	top: 50%; left: 50%;
-	transform: translate(-50%, -50%);
-    display: none;
     font-family: Arial, Helvetica, sans-serif;
     background:url("../images/registerBack.jpg");
     background-position: center; /* Center the image */
@@ -12,21 +16,16 @@
     background-clip: border-box;
     object-fit: contain;
     overflow: hidden;
-    margin: 0px auto;
-    width: 640px;
-    height: 550px;
+    width: 75%;
+    height: auto;
     border: solid 3px black;
     border-radius: 25px;
     padding: .5em 2em 1em;
     box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    z-index: 1000;
 }
 
 .confirmed {
-    display:none;
-	position: absolute;
-	top: 50%; left: 50%;
-	transform: translate(-50%, -50%);
+    display: none;
     font-family: Arial, Helvetica, sans-serif;
     background:url("../images/registerBack.jpg");
     background-position: center; /* Center the image */
@@ -35,31 +34,16 @@
     background-clip: border-box;
     object-fit: contain;
     overflow: hidden;
-    margin: 0 auto;
-    width: 640px;
-    height: 550px;
+    width: 75%;
+    height: auto;
     border: solid 3px black;
     border-radius: 25px;
     padding: .5em 2em 1em;
     box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    z-index: 1000;
 }
 
-#wmBannerHolder {
-    height: 70px;
-    background: radial-gradient(circle, rgba(228,4,20,1) 0%, rgba(148,187,233,1) 100%);
-    z-index: 1;
-    border: 2px solid black;
-    border-radius: 15px;
-    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-
-}
-
-#wmBannerReg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
+.hidden {
+    display: none;
 }
 
 #thankYouImage {
@@ -79,10 +63,6 @@
     background-size: cover;
     overflow: hidden;
     
-}
-
-.confirmed {
-    display: none;
 }
 
 #rowFlex {
@@ -111,6 +91,7 @@ div {
 
 .organize {
     display: flex;
+    justify-content: center;
 }
 
 #radios label {
@@ -131,22 +112,31 @@ label {
     text-align: right;
     vertical-align: top;
     color: white;
-    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-
 }
 
-input, select, textarea {
+#navSelect {
+    text-align: left;
+    color: black;
+}
+
+input, textarea {
     margin-left: 1em;
     margin-right: 0.5em;
 }
 
-select { 
+#country { 
     width: 13em; 
+    margin-left: 1em;
+    margin-right: 0.5em;
 }
 
 textarea {
     height: 5em;
     width: 20em;
+}
+
+#textBox {
+display: flex;
 }
 
 span {
@@ -165,4 +155,8 @@ span {
     border-radius: 15px;
     box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
+}
+
+.regButton:hover {
+    background-color: crimson;
 }

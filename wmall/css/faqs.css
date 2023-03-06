@@ -1,14 +1,14 @@
 
-#faqs * {
-    margin: 0;
-    padding: 0;
+
+.shopMiddle {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
 }
 
 #faqs {
-    display: none;
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
     font-family: Arial, Helvetica, sans-serif;
     background:url("../images/registerBack.jpg");
     background-position: center; /* Center the image */
@@ -17,79 +17,38 @@
     background-clip: border-box;
     object-fit: contain;
     overflow: hidden;
-    margin: 0px auto;
-    width: 640px;
-    height: 550px;
+    width: 80%;
+    height: 80%;
     border: solid 3px black;
     border-radius: 25px;
     padding: .5em 2em 1em;
     box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    z-index: 1000;
-}
-
-#close_faqs {
-    position: absolute;
-    top: 90%; left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
-    width: 75px;
-    border-radius: 25px;
-    border: 3px solid darkred;
-    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-
-#faqs body {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 87.5%;
-    width: 550px;
-    margin: 0 auto;
-    border: 3px solid blue;
-    padding: 15px 25px;
 }
 
 #faqs h1 { 
-	position: relative;
 	font-size: 3em;
 	color: rgb(255, 0, 0);
     text-align: center;
 }
 
-#faq_rollovers h2 {
+#accordion h3 {
     font-size: 120%;
     padding: .25em 0 .25em 25px;
     color: rgb(5, 232, 54);
     cursor: pointer;
 }
 
-#faq_rollovers h2:focus, h2:hover { 
-	color: rgb(217, 17, 17); 
+#accordion p {
+    font-size: 120%;
+    padding: .25em 0 .25em 25px;
+    color: rgb(232, 5, 5);
+    cursor: pointer;
 }
 
-#faqs div {
-    display: none;
+#accordion div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
 }
 
-#faqs div.open {
-    display: block;
-}
-
-#faq_rollovers ul {
-    padding-left: 45px;
-}
-
-#faq_rollovers li {
-    text-align:left;
-    color: rgb(230, 27, 68);
-    padding-bottom: .25em;
-    list-style-type: none;
-}
-
-#faq_rollovers p {
-    text-align:left;
-    padding-bottom: .25em;
-    padding-left: 25px;
-}
-
-#faqs .hidden {
-	display: none;
-}

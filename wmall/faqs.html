@@ -10,51 +10,106 @@
         <meta name="keywords" content="rpg ttrpg fantasy scifi cyberpunk">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/siteWide.css" type="text/css">
-        <link rel="stylesheet" href="css/register.css" type="text/css">
         <link rel="stylesheet" href="css/faqs.css" type="text/css">
-        <script src="https://kit.fontawesome.com/046adaf601.js" crossorigin="anonymous"></script>        <script src="js/register.js"></script>
-        </head>
+        <link rel="stylesheet" href="css/shopStyle.css" type="text/css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script src="js/shop.js"></script>
+      </head>
+      <div class="shopWrapper">
+        <header class="fullHeader">
+            <div class="logoHeader">
+              <!-- titleBanner content -->
+              <img src="\images\wmBannerProto.png" alt="A grungy text displaying western mall">
+            </div>
+            <div class="ScrollingTextBanner">
+              <!-- ScrollingTextBanner content -->
+              <div id="scroll-text"><script src="js/messagesScript.js"></script>
+              </div>
+          </div>
+        </header>
+        <main class="shopMain">
+            
+        <aside class="shopLeft">
+        <!-- Left sidebar -->
+        <fieldset>
+            <label for="pages">Navigate to:</label>
+            <select id="pages">
+              <option value="index.html">Home - WesternMall Main Page</option>
+              <option value="weapons.html">Arms - The Weapons You Want</option>
+              <option value="gear.html">Gear - The Gear You Need</option>
+              <option value="pas.html">PAs - Choose A Personal Assistant</option>
+              <option>---------</option>
+              <option value="faqs.html">FAQs - General Questions</option>
+              <option value="register.html">Register - Create An Account</option>
+            </select>
+        </fieldset>
+        <h2 id="advertHead">On Sale Now!</h2>
+        <div class="my-slider">
+            <div class="item"><img src="images/battleLauncher.jpg" /></div>
+            <div class="item"><img src="images/blasters.jpg" /></div>
+            <div class="item"><img src="images/hers-laserRifle.jpg" /></div>
+            <div class="item"><img src="images/hoverTank.jpg" /></div>
+        </div>
+
+        </aside>
+
+        <!-- Main content -->
+        <article class="shopMiddle">
+          <div id="faqs">
+            <h1>WesternMall FAQs</h1>
+              <br>
+            <div id="accordion">
+              <h3>What is the WesternMall?</h3>
+              <div>
+                <p>(OOC) It is a website where players can spend their hard earned Terran Units. All 
+                  equipment available in the game will be able to be shopped for here at the 
+                  WesternMall website.<br><br>
+          
+                  (IC) It's only the best place to shop for the serious merc. Things that go BOOM, things
+                  that keep you from going BOOM, and a few things to make your life easier are all available
+                  here at the WesternMall.
+                  <br>
+                  <br><sub><em>*OOC is out of character and IC is In Character</em></sub></p>
+              </div>
+              <h3>Why a website?</h3>
+              <div>
+                <p>Three reasons:<br><br>
+              
+                  It's easier than sharing a book.<br>
+                  It allows for more items to be added over time without publishing a new book.<br>
+                  It adds a lot more immersion to the game.<br>
+              </p>
+              </div>
+              <h3>What are the future plans for this site?</h3>
+              <div>
+                <p>A lot more items, character accounts with GM access to award TU for characters to spend, 
+                  and shipping manifests to be sent to player email to prove they purchased the items.
+                </p>
+              </div>
+              <h3>Do you have a life outside of game designing and developing?</h3>
+              <div>
+                <p>No, I do not.
+                </p>
+              </div>
+            </div>
+            <br>
+            <h1>Thank you for your curiousity and visiting!</h1>
+          </div>
+        
+        </article>
+    </main> <!-- End shopMain -->
+    <footer>
+        <div class="footer">
+            <!-- footer content -->
+            <p>Copyright &copy; 2023. All Rights Reserved</p>
+        </div>
+    </footer>
+    </div> <!-- End shopWrapper -->
+</body>
+</html>
     <body>
   <!-- Faqs popup -->
-  <div id="faqs">
-    <h1>WesternMall FAQs</h1>
-      <br>
-      <hr>
-      <ul id="faq_rollovers">
-        <li>
-          <h2>What is the WesternMall?</h2>
-            <p class="hidden">(OOC) It is a website where players can spend their hard earned Terran Units. All 
-              equipment available in the game will be able to be shopped for here at the 
-              WesternMall website.<br><br>
-    
-              (IC) It's only the best place to shop for the serious merc. Things that go BOOM, things
-              that keep you from going BOOM, and a few things to make your life easier are all available
-              here at the WesternMall.
-              <br>
-              <br><sub><em>*OOC is out of character and IC is In Character</em></sub></p>
-        </li>
-        <li>
-          <h2>Why a website?</h2>
-          <p class="hidden">Three reasons:<br><br>
-    
-              It's easier than sharing a book.<br>
-              It allows for more items to be added over time without publishing a new book.<br>
-              It adds a lot more immersion to the game.<br>
-          </p>
-        </li>
-        <li>
-          <h2>Do you have a life outside of game designing and developing?</h2>
-          <p class="hidden">No, I do not.
-          </p>
-        </li>
-        <li>
-          <h2>What are the future plans for this site?</h2>
-          <p class="hidden">A lot more items, character accounts with GM access to award TU for characters to spend, 
-            and shipping manifests to be sent to player email to prove they purchased the items.
-          </p>
-        </li>
-      </ul>
-          <input type="button" id="close_faqs" value="Close">
-      <script src="js/faqs.js"></script>
-  </div>
+</body>
 </html>

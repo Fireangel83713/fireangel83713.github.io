@@ -1,285 +1,123 @@
 <!DOCTYPE html>
-<!-- Michael Jewett
-    01/23/2023 -->
+<!-- 
+    Michael Jewett / Jan 23, 2023 
+-->
+
 <html lang="en">
     <head>
-        <title>WesternMall - Gear listings</title>
+        <title>WesternMall - Personal Assistants - Lil' Buddy™</title>
         <meta name="author" content="Michael Jewett">
         <meta charset="UTF-8">
-        <meta name="description" content="Western mall for eldrith earth rpg gear page">
+        <meta name="description" content="Western mall for eldrith earth rpg Personal Assistants Lil' Buddy page">
         <meta name="keywords" content="rpg ttrpg fantasy scifi cyberpunk">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/siteWide.css" type="text/css">
-        <link rel="stylesheet" href="css/register.css" type="text/css">
-        <link rel="stylesheet" href="css/faqs.css" type="text/css">
-        <script src="https://kit.fontawesome.com/046adaf601.js" crossorigin="anonymous"></script>        <script src="js/register.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    </head>
-    <body>
-        <!-- Page navigation -->
-        <header class="headerContainer">
-            <div class="navi">
-                <div id="navMenu" class="diamond">
-                  <div id="mainRotCorrect" class="rotCorrect"><i class="fas fa-question fa-4x" aria-hidden="true"></i></div>
+        <link rel="stylesheet" href="css/shopStyle.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" type="text/css">
+        <script type="text/javascript" src="js/jqueryui/jquery-3.6.3.min.js"></script>
+        <script type="text/javascript" src="js/jqueryui/jquery-ui.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>  
+        <script type="text/javascript" src="js/shop.js"></script>    
+        <script
+        defer
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/@vime/core@^5/dist/vime/vime.esm.js"
+      ></script>
+        <body>
+        <div class="shopWrapper">
+            <header class="fullHeader">
+                <div class="logoHeader">
+                  <!-- titleBanner content -->
+                  <img src="\images\wmBannerProto.png" alt="A grungy text displaying western mall">
                 </div>
-                <div id="nav1" class="nav nav1 diamond">
-                  <a href="index.html"><div class="rotCorrect"><i class="fa fa-home fa-2x" aria-hidden="true"></i></div></a>
-                </div>
-                <div id="nav2" class="nav nav2 diamond">
-                  <a href="weapons.html"><div class="rotCorrect"><i class="fa-solid fa-gun fa-2x" aria-hidden="true"></i></div></a>
-                </div>
-                <div id="nav3" class="nav nav3 diamond">
-                  <div class="rotCorrect"><i class="fas fa-user fa-2x" aria-hidden="true"></i>
-                </div>
-                </div>
-                <div id="nav4" class="nav nav4 diamond">
-                  <a href="gear.html"><div class="rotCorrect"><i class="fas fa-vest fa-2x" aria-hidden="true"></i></div></a>
-                </div>
-                <div id="nav5" class="nav nav5 diamond">
-                  <a href="pas.html"><div class="rotCorrect"><i class="fas fa-robot fa-2x" aria-hidden="true"></i></div></a>
-                </div>
-              </div>
-              <div class="logo">
-                <!-- titleBanner content -->
-                <img id="titleBanner" src="images\wmBanner.png" alt="A grungy text displaying western mall">
-                <img id="mobileBanner" src="images\wmBannerPort.png" alt="A grungy text displaying western mall">
-              </div>
-              <div class="ScrollingTextBanner">
-                <!-- ScrollingTextBanner content -->
-                <div id="scroll-text"><script src="js\messagesScript.js"></script></div>
+                <div class="ScrollingTextBanner">
+                  <!-- ScrollingTextBanner content -->
+                  <div id="scroll-text"><script src="js/messagesScript.js"></script>
+                  </div>
               </div>
             </header>
-  
-                      <!-- Mobile and Smaller Screen Header for Logo Banner and Navigation-->
-          <header class="headerMobile">
-            <!-- Mobile and Smaller Screen Logo-->
-              <div class="mobileLogo">
-                <img src="images\wmBannerPort.png" alt="Western mall in grungy lettering">
-              </div>
-  
-            <!-- Mobile Navigation Menu -->
-              <nav class="mobileNav">
-              <!-- Home Icon Menu Item for Mobile Nav -->
-                <div class="homeIcon">
-                  <div id="homeImage" class="navRow">
-                      <a href="index.html" class="active">Home</a>
-                  </div>
-                </div>
-  
-              <!-- Arms Icon Menu Item for Mobile Nav -->
-                <div class="armsIcon">
-                    <div id="weaponImage" class="navRow">
-                        <a href="weapons.html">Arms</a>
-                    </div>
-                </div>
+            <main class="shopMain">
                 
-              <!-- Gear Icon Menu Item for Mobile Nav -->
-                <div class="gearIcon">
-                    <div id="gearImage" class="navRow">
-                        <a href="gear.html">Gear</a>
-                    </div>
-                </div>
-                
-              <!-- Personal Assistant Icon Menu Item for Mobile Nav -->
-                <div class="paIcon">
-                    <div id="paImage" class="navRow">
-                        <a href="pas.html">PAs</a>
-                    </div>
-                </div>
-                
-                <!-- FAQs Menu Item for Mobile Nav -->
-                <div class="faqsButton">
-                  <button class="navButton" id="faqsButton">FAQs</button>
-                </div>
-  
-                <!-- Registration Menu Item for Mobile Nav -->
-                <div class="regButton">
-                  <button class="navButton" id="regButton">Register</button>
-                </div>
-              </nav>
-            </header>
-            
-          <secton class="mainPage">
-            <div class="shop">
-              <!-- shop content -->
-              <div class="shopArms">
-                <!-- shopArms content -->
-                <a href="weapons.html">
-                  <div id="weapons">
-                      <div class="weaponTitle"><h2>Arms</h2></div>
-                  </div>
-              </a>
-              </div>
-              <div class="shopGear">
-                <!-- shopGear content -->
-                <a href="gear.html">
-                  <div id="gear">
-                      <div class="gearTitle"><h2>Gear</h2></div>
-                  </div>
-              </a>
-              </div>
-              <div class="shopPas">
-                <!-- shopPas content -->
-                <a href="pas.html">
-                  <div id="personalAssistants">
-                      <div class="paTitle"><h2>Personal<br>Assistants</h2></div>
-                  </div>
-              </a>
-              </div>
-            </div>
-  
-            <aside class="advertAside1">
-              <div class="advert">
-                <!-- advert content -->
-                <img src="images\advert1bt.jpg">
-              </div>
-              <div class="advertCost">
-                <!-- advertCost content -->
-                <b><h3>10,000TU</h3></b>
-              </div>
-              <div class="advertBuy">
-                <!-- advertBuy content -->
-                <button id="buyButton">Buy Now</button>
-              </div>
-          </aside> <!-- End advertAside1 -->
-            <aside class="advertAside2">
-              <div class="advertVideo">
-                <!-- advertVideo content -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/HkPk-uVWLMY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
-              <div class="advertVideoStatement">
-                <!-- advertVideoStatement content -->
-                <img src="images\gearUp.png">            </div>
-            </aside> <!-- End advertAside2 -->
-          </secton>
-          <div class="footer">
-            <!-- footer content -->
-            <p>Copyright &copy; 2022. All Rights Reserved</p>
-          </div>
-          <script src="js/register.js"></script>
-          <script src="js/faqs.js"></script>
-      </body>
-    <!-- PopUps -->
-    <!--popup registration-->
-    <div class="popup">
-        <div id="wmBannerHolder">
-            <img id="wmBannerReg" src="images\wmBanner.png" alt="A grungy text displaying western mall">
-        </div>
-        <h1>Register for an Account</h1>
-        <form>
-            <div>
-                <label for="email_address">E-Mail:</label>
-                <input type="text" name="email_address" id="email_address">
-                <span>*</span>
-            </div>
-            <div>
-                <label for="phone">Mobile Phone:</label>
-                <input type="text" name="phone" id="phone">
-                <span>*</span>
-            </div>
-            <div>
-                <label for="country">Country:</label>
-                <select name="country" id="country">
-                    <option value="">Select a country</option>
-                    <option style="color:red">USA</option>
-                    <option style="color:green">Canada</option>
-                    <option style="color:yellowgreen">Mexico</option>
-                    <option style="color:purple">japan</option>
-                    <option style="color:peru">China</option>
-                    <option style="color:darkred">Russia</option>
+            <aside class="shopLeft">
+            <!-- Left sidebar -->
+            <fieldset>
+                <label for="pages">Navigate to:</label>
+                <select id="pages">
+                  <option value="index.html">Home - WesternMall Main Page</option>
+                  <option value="weapons.html">Arms - The Weapons You Want</option>
+                  <option value="gear.html">Gear - The Gear You Need</option>
+                  <option value="pas.html">PAs - Choose A Personal Assistant</option>
+                  <option>---------</option>
+                  <option value="faqs.html">FAQs - General Questions</option>
+                  <option value="register.html">Register - Create An Account</option>
                 </select>
-                <span>*</span>
+            </fieldset>
+            <h2 id="advertHead">On Sale Now!</h2>
+            <div class="my-slider">
+                <div class="item"><img src="images/battleLauncher.jpg" /></div>
+                <div class="item"><img src="images/blasters.jpg" /></div>
+                <div class="item"><img src="images/hers-laserRifle.jpg" /></div>
+                <div class="item"><img src="images/hoverTank.jpg" /></div>
             </div>
-            <div class="organize">
-                <label>Contact me by:</label>
-                <div id="radios">
-                    <label><input type="radio" name="contact" id="text"
-                        value="text" checked>Text</label>
-                    <label><input type="radio" name="contact" id="email"
-                        value="email">Email</label>
-                    <label><input type="radio" name="contact" id="mobile"
-                        value="mobile">Cell</label>
-                    <label><input type="radio" name="contact" id="none"
-                        value="none">Do not contact</label>
+
+            </aside>
+    
+            <!-- Main content -->
+            <article class="shopMiddle">
+                <div class="shop">
+                    <!-- shop content -->
+                    <div class="shopArms">
+                      <!-- shopArms content -->
+                      <a href="weapons.html">
+                        <div id="weapons">
+                            <div class="weaponTitle"><h2>Arms</h2></div>
+                        </div>
+                    </a>
                     </div>
-            </div>
-            <div class="organize">
-                    <label>Terms of Service:</label>
-                    <div id="chkBox">
-                    <label><input type="checkbox" name="terms" id="terms"
-                        value="yes">I accept<span>&#160;&#160;*</span></label>
-                </div>
-            </div>
-            <div>
-                <label for="comments">Comments:</label>
-                <textarea name="comments" id="comments" row="5" cols="40"></textarea>
-                <span>*</span>
-            </div>
-            <div>
-                <label>&nbsp;</label>
-                <input type="button" id="register" value="Register">
-                <input type="button" id="reset_form" value="Reset">
-                <input type="button" id="close_form" value="Close">
-            </div>
-  
-        </form>
-    </div>
-  
-    <div class="confirmed">
-        <div id="wmBannerHolder">
-            <img id="wmBannerReg" src="images\wmBanner.png" alt="A grungy text displaying western mall">
-        </div>
-        <div id="thankYouImage">
-            <img id="thankYouRobot" src="images\thankyou.png" alt="A robot thanking you for registering">
-            <div id="rowFlex">
-                <h1>Thanks for registering with us!</h1>
-                <p>You should get a confirmation email shortly.</p>
-                <label>&nbsp;</label>
-                <input type="button" id="close_form" value="Close">
-            </div>
-        </div>
-    </div>
-  
-  <!-- Faqs popup -->
-  <div id="faqs">
-    <h1>WesternMall FAQs</h1>
-      <br>
-      <hr>
-      <ul id="faq_rollovers">
-        <li>
-          <h2>What is the WesternMall?</h2>
-            <p class="hidden">(OOC) It is a website where players can spend their hard earned Terran Units. All 
-              equipment available in the game will be able to be shopped for here at the 
-              WesternMall website.<br><br>
+                    <div class="shopGear">
+                      <!-- shopGear content -->
+                      <a href="gear.html">
+                        <div id="gear">
+                            <div class="gearTitle"><h2>Gear</h2></div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="shopPas">
+                      <!-- shopPas content -->
+                      <a href="pas.html">
+                        <div id="personalAssistants">
+                            <div class="paTitle"><h2>Personal<br>Assistants</h2></div>
+                        </div>
+                    </a>
+                    </div>
+                  </div>
+        
+            </article>
     
-              (IC) It's only the best place to shop for the serious merc. Things that go BOOM, things
-              that keep you from going BOOM, and a few things to make your life easier are all available
-              here at the WesternMall.
-              <br>
-              <br><sub><em>*OOC is out of character and IC is In Character</em></sub></p>
-        </li>
-        <li>
-          <h2>Why a website?</h2>
-          <p class="hidden">Three reasons:<br><br>
-    
-              It's easier than sharing a book.<br>
-              It allows for more items to be added over time without publishing a new book.<br>
-              It adds a lot more immersion to the game.<br>
-          </p>
-        </li>
-        <li>
-          <h2>Do you have a life outside of game designing and developing?</h2>
-          <p class="hidden">No, I do not.
-          </p>
-        </li>
-        <li>
-          <h2>What are the future plans for this site?</h2>
-          <p class="hidden">A lot more items, character accounts with GM access to award TU for characters to spend, 
-            and shipping manifests to be sent to player email to prove they purchased the items.
-          </p>
-        </li>
-      </ul>
-          <input type="button" id="close_faqs" value="Close">
-      <script src="js/faqs.js"></script>
-  </div>
+            <!-- Right sidebar -->
+            <aside class="shopRight">
+                <div id="container">
+                    <vm-player playsinline>
+                        <vm-player controls>
+                            <vm-youtube video-id="HkPk-uVWLMY"></vm-youtube>
+                            <!-- ... -->
+                          </vm-player>
+                      <vm-default-ui></vm-default-ui>
+                    </vm-player>
+                  </div>
+
+                    <div class="advertAside2">
+                      <!-- advertVideoStatement content -->
+                      <img src="images/prepared.jpg">            
+                    </div>
+                    </aside>
+        </main> <!-- End shopMain -->
+        <footer>
+            <div class="footer">
+                <!-- footer content -->
+                <p>Copyright &copy; 2023. All Rights Reserved</p>
+            </div>
+        </footer>
+        </div> <!-- End shopWrapper -->
+    </body>
 </html>

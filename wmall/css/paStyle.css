@@ -1,19 +1,3 @@
-.paShop {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items:center;
-  justify-content: center;
-}
-
-.paShop a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
 
 #reviewImage {
   height: 200px;
@@ -21,23 +5,6 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.paShop {  
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "productImage1 productDescription"
-    "productImage2 productDescription"
-    "corpImage purchaseProduct";
-}
-
-.shopMiddle {
-  width: 60%;
-  justify-content: center;
 }
 
 .mainBody {
@@ -135,69 +102,56 @@ img {
 }
 
   /* Format container for pa products */ 
-.pa {
+.shopMiddle {
   display: flex;
-  height: 190px;
-  width: 190px;
-  margin: auto;
-  position: relative;
+  margin-left: 2rem;;
+  width: 100%;
+  justify-content: center;
+}
+
+.paShop {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: center;
+  align-content: center;
+  justify-self: center;
+  text-align: left;
+}
+
+.paShop a {
+  text-decoration: none;
 }
 
 .productDescription { 
-  grid-area: productDescription;
-  margin-top: 100px;
-  margin-right: 50px;
-  padding-left: 50px;
-}
-
-.productImage1 { 
-  grid-area: productImage1;
-  height: 300px;
-  width: 300px; 
-  margin-left: 50px;
-  margin-top: 75px;
-  align-items: center;
-  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size:cover; /* Resize the background image to cover the entire container */
-}
-
-.productImage2 { 
-  grid-area: productImage2; 
-  height: 300px;
-  width: 300px; 
-  margin-left: 50px;
-  margin-top: 75px;
-  align-items: center;
-  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size:cover; /* Resize the background image to cover the entire container */
+  width: 100%;
 }
 
 .corpImage { 
-  grid-area: corpImage; 
-  height: 175px;
-  width: 215px; 
-  margin-left: 90px;
-  margin-top: 75px;
-  align-items: center;
+  margin-left: 1.2rem;
+  display: flex;
+  width: 90%; 
+  height: auto;
+  margin-top: 2rem;
   box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size:auto; /* Resize the background image to cover the entire container */
+}
+
+.corpImage img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  align-self: center;
 }
 
 .purchaseProduct { 
-  grid-area: purchaseProduct; 
   text-align: center;
-  height: 300px;
-  width: 450px;
+  width: 100%;
   border: solid 3px black;
 }
 
 .paReview {  
+  margin-top: 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -206,37 +160,38 @@ img {
   grid-template-areas:
     "reviews starRating"
     "reviewerImage reviewerReview"
-    "reviewerImage imagePosted";
+    ". imagePosted";
 }
 
 .reviewerReview { 
   grid-area: reviewerReview; 
   text-align: center;
   justify-content: center;
-  padding-top: 30px;
-  padding-right: 90px;
-  padding-left: 50px;
+  margin-left: 2rem;
 }
 
 .imagePosted { 
   grid-area: imagePosted;
-  align-self: center;
-  padding-right: 50px;
-  background-position: center;
-  background-size:cover;
-  background-repeat: no-repeat;
+  width: 100%; 
+  box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.imagePosted img { 
+  width: 100%;
+  height: 100%;
 }
 
 .reviewerImage { 
   grid-area: reviewerImage; 
-  height: 190px;
-  width: 270px; 
-  margin-left: 50px;
-  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 100%; 
   box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size:cover; /* Resize the background image to cover the entire container */
+}
+
+.reviewerImage img {
+  width: 100%;
+  height: 100%;
 }
 
 .reviews { grid-area: reviews; }
