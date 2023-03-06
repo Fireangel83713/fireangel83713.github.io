@@ -108,24 +108,21 @@ select {
     overflow: hidden;
   }
 
-  .advertAside2 {
-
-    border: solid 3px black;
-    border-radius: 25px;
-    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+.advertAside2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    margin-top: 5em;
-  }
-  
-  .advertAside2 img {
+    margin-top: 4rem;
+}
+
+.advertAside2 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
 
-  .footer {
+.footer {
     text-align: center;
-  }
+}

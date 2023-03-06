@@ -17,10 +17,12 @@ $(document).ready(function () {
 
         $('#pages').on('change', function () {
             var url = $(this).val(); // get selected value
+            var msg = url + 'onchange event triggered'
+            console.log(msg);
             if (url === "faqs"){
-                $( "#faqs" ).dialog('open');
+                $( "#faqs" ).load("faqs.html");
             } else if (url === "register"){
-                $( "#register" ).dialog('open');
+                $("#register").load("register.html");
             } else if (url) { // require a URL
                 window.location = url; // redirect
             } 
