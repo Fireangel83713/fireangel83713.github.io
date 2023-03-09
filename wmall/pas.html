@@ -17,12 +17,9 @@
         <script type="text/javascript" src="js/jqueryui/jquery-ui.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>  
         <script type="text/javascript" src="js/shop.js"></script>    
-        <script
-        defer
-        type="module"
-        src="https://cdn.jsdelivr.net/npm/@vime/core@^5/dist/vime/vime.esm.js"
-      ></script>
-      <script src="js\paCarousel.js"></script>
+        <script defer type="module" src="https://cdn.jsdelivr.net/npm/@vime/core@^5/dist/vime/vime.esm.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+        <script src="js\paCarousel.js"></script>
       <body>
         <div class="shopWrapper">
             <header class="fullHeader">
@@ -40,6 +37,9 @@
                 
             <aside class="shopLeft">
             <!-- Left sidebar -->
+            <div id="userWelcome">
+              <label id="user"></label>
+            </div>
             <fieldset>
                 <label for="pages">Navigate to:</label>
                 <select id="pages">
@@ -48,10 +48,11 @@
                   <option value="gear.html">Gear - The Gear You Need</option>
                   <option value="pas.html">PAs - Choose A Personal Assistant</option>
                   <option>---------</option>
-                  <option value="faqs">FAQs - General QUestions</option>
-                  <option value="register">Register - Create An Account</option>
+                  <option value="faqs.html">FAQs - General QUestions</option>
+                  <option value="register.html">Register - Create An Account</option>
                 </select>
             </fieldset>
+            <div id="countdown"></div>
             <h2 id="advertHead">On Sale Now!</h2>
             <div class="my-slider">
                 <div class="item"><img src="images/battleLauncher.jpg" /></div>
@@ -63,12 +64,10 @@
             </aside>
     
             <!-- Main content -->
-            <article class="shopMiddle">
+            <article class="shopMiddlePa">
               <!--Main body container for formatting page background-->
-              <section class="mainBody">
-                <!--Shop Menu Items, images provided by CSS-->
-                <section class="paCatalogue">
-                  <section class="slider-wrapper">
+              <div class="paCatalogue">
+                  <div class="slider-wrapper">
                     <button class="slide-arrow" id="slide-arrow-next">
                       &#8250;
                     </button>
@@ -83,28 +82,30 @@
                       <li class="slide"><a href="pa5.html"><img src="images/halCarousel.png" alt="Hal"></a></li>
                       <li class="slide"><a href="pa6.html"><img src="images/marvinCarousel.png" alt="Marvin"></a></li>
                     </ul>
-                  </section>
-                </section>
-            </section>
-                </article>
+                  </div>
+                </div>
+            </article>
     
             <!-- Right sidebar -->
             <aside class="shopRight">
                 <div id="container">
-                    <vm-player playsinline>
-                        <vm-player controls>
-                            <vm-youtube video-id="HkPk-uVWLMY"></vm-youtube>
-                            <!-- ... -->
-                          </vm-player>
-                      <vm-default-ui></vm-default-ui>
-                    </vm-player>
-                  </div>
+                  <vm-player playsinline>
+                      <vm-player controls>
+                          <vm-youtube video-id="HkPk-uVWLMY"></vm-youtube>
+                          <!-- ... -->
+                        </vm-player>
+                    <vm-default-ui></vm-default-ui>
+                  </vm-player>
+                </div>
 
-                    <div class="advertAside2">
-                      <!-- advertVideoStatement content -->
-                      <img src="images/prepared.jpg">            
-                    </div>
-                    </aside>
+                <div class="advertAside2">
+                  <!-- advertVideoStatement content -->
+                  <img src="images/prepared.jpg">            
+                </div>
+                <div class="advertAside2Text">
+                  <p id="advert2Text">With our equipment, combat has never been so easy. Gear up today!</p>
+                </div>                    
+              </aside>
         </main> <!-- End shopMain -->
         <footer>
             <div class="footer">

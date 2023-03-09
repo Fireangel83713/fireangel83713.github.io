@@ -48,6 +48,7 @@ select {
     /* Take the remaining width */
     flex-grow: 1;
     justify-content: center;
+    width: 80%;
 }
 
 .shopRight {
@@ -113,6 +114,18 @@ select {
     height: 100%;
     object-fit: cover;
     box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.advertAside2Text {
+    border: black 3px solid;
+    border-radius: 25px;
+    margin-top: 4rem;
+}
+
+#advert2Text {
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
 }
 
 .footer {

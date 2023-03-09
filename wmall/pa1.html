@@ -19,11 +19,8 @@
         <script type="text/javascript" src="js/jqueryui/jquery-ui.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>  
         <script type="text/javascript" src="js/shop.js"></script>    
-        <script
-        defer
-        type="module"
-        src="https://cdn.jsdelivr.net/npm/@vime/core@^5/dist/vime/vime.esm.js"
-      ></script>
+        <script defer type="module" src="https://cdn.jsdelivr.net/npm/@vime/core@^5/dist/vime/vime.esm.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
         <body>
         <div class="shopWrapper">
             <header class="fullHeader">
@@ -41,6 +38,9 @@
             <main class="shopMain">
             <aside class="shopLeft">
             <!-- Left sidebar -->
+            <div id="userWelcome">
+                <label id="user"></label>
+              </div>
             <fieldset>
                 <label for="pages">Navigate to:</label>
                 <select id="pages">
@@ -53,6 +53,7 @@
                   <option value="register.html">Register - Create An Account</option>
                 </select>
             </fieldset>
+            <div id="countdown"></div>
             <h2 id="advertHead">On Sale Now!</h2>
             <div class="my-slider">
                 <div class="item"><img src="images\lilBuddy.jpg" alt="little brown and gold robot">/></div>
@@ -69,7 +70,7 @@
             </aside>
     
             <!-- Main content -->
-            <article class="shopMiddle">
+            <article class="shopMiddlePaProduct">
                 <div class="paShop">
                     <div class="productDescription">
                         <h1><b>Lil' Buddy™</b></h1>
@@ -100,7 +101,6 @@
                     </div>
                     <div class="paReview">
                         <div class="reviewerReview"><p>"...Lil'Buddy saved my bacon.  I had stored the CredChip™ with the creds on it to get the job done that I was hired to do under my bunk. While I was away getting some synth-fries, some of the local gangers broke into my apartment only to be confronted by Lil'Buddy.  lol I doubt either of them will be able to reproduce in the future based on the smoke coming from their pants."</p></div>
-                        <div class="imagePosted"></div>
                         <div class="reviewerImage"><img src="images\imNotAKaren.png" alt="An anime girl with blue hair"></div>
                         <div class="reviews"><h2><b>Reviews</b> (<b>1</b>)</h2></div>
                         <div class="starRating"><img src="images\star review 4.5 star.png" alt="a 4 and a half star rating shown in blue stars with a silver outline"></div>

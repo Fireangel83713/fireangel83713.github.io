@@ -7,12 +7,6 @@
   background-size: cover;
 }
 
-.mainBody {
-  display: flex;
-  width: 90%;
-  justify-content: center;
-}
-
 .paCatalogue {  
   display: flex;
   background: url("../images/mainBack.jpg");
@@ -21,9 +15,11 @@
   border: black 3px solid;
   border-radius: 25px;
   overflow: hidden;
-  width: 100%;
+  width: 90%;
+  height: 75%;
   box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   align-items: center;
+  vertical-align: middle;
 }
 
 .paCatalogue a {
@@ -35,6 +31,7 @@
   display: flex;
   overflow: hidden;
   justify-content: center;
+  height: 75%;
 }
 
 .slides-container {
@@ -47,7 +44,6 @@
   padding: 0;
   overflow-y:hidden; /* Hide vertical scrollbar */
   box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  width: 80%;
 }
 
 .slides-container::-webkit-scrollbar {
@@ -101,19 +97,40 @@
   flex: 1 0 100%;
 }
 
-  /* Format container for pa products */ 
-.shopMiddle {
-  display: flex;
-  margin-left: 2rem;;
+.slide img {
+  background-size: cover;
   width: 100%;
+}
+
+  /* Format container for pa products */ 
+.shopMiddlePa {
+  display: flex;
+  /* Take the remaining width */
+  flex-grow: 1;
   justify-content: center;
+  width: 52%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopMiddlePaProduct {
+  display: flex;
+  /* Take the remaining width */
+  flex-grow: 1;
+  justify-content: center;
+  width: 52%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
 }
 
 .paShop {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
   justify-content: center;
   align-content: center;
   justify-self: center;

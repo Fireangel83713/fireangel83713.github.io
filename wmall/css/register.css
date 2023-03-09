@@ -72,9 +72,19 @@
     text-align: center;
 }
 
-#close_form {
+#homeButton {
     width: 75px;
     border-radius: 25px;
+    border: 3px solid darkred;
+    margin-right: 1em;
+    box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#homeButton:hover {
+    width: 75px;
+    border-radius: 25px;
+    color: white;
+    background-color: black;
     border: 3px solid darkred;
     margin-right: 1em;
     box-shadow: rgba(63, 63, 77, 0.664) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -91,7 +101,7 @@ div {
 
 .organize {
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 #radios label {

@@ -18,11 +18,9 @@
         <script type="text/javascript" src="js/jqueryui/jquery-ui.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>  
         <script type="text/javascript" src="js/shop.js"></script>    
-        <script
-        defer
-        type="module"
-        src="https://cdn.jsdelivr.net/npm/@vime/core@^5/dist/vime/vime.esm.js"
-      ></script>
+        <script defer type="module" src="https://cdn.jsdelivr.net/npm/@vime/core@^5/dist/vime/vime.esm.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+
         <body>
         <div class="shopWrapper">
             <header class="fullHeader">
@@ -39,6 +37,9 @@
             <main class="shopMain">
             <aside class="shopLeft">
             <!-- Left sidebar -->
+            <div id="userWelcome">
+                <label id="user"></label>
+              </div>
             <fieldset>
                 <label id="navSelect" for="pages">Navigate to:</label>
                 <select id="pages">
@@ -51,6 +52,7 @@
                   <option value="register.html">Register - Create An Account</option>
                 </select>
             </fieldset>
+            <div id="countdown"></div>
             <h2 id="advertHead">On Sale Now!</h2>
             <div class="my-slider">
                 <div class="item"><img src="images/battleLauncher.jpg" /></div>
@@ -63,68 +65,75 @@
     
             <!-- Main content -->
             <article class="shopMiddle">
-                <!-- PopUps -->
-                <!--popup registration-->
-                <div class="popup" id="popup">
-                    <h1>Register for an Account</h1>
-                    <form>
-                        <div>
-                            <label for="email_address">E-Mail:</label>
-                            <input type="text" name="email" id="email">
-                            <span>*</span>
-                        </div>
-                        <div>
-                            <label for="phone">Mobile Phone:</label>
-                            <input type="text" name="phone" id="phone">
-                            <span>*</span>
-                        </div>
-                        <div>
-                            <label for="country">Country:</label>
-                            <select name="country" id="country">
-                                <option value="">Select a country</option>
-                                <option style="color:red">USA</option>
-                                <option style="color:green">Canada</option>
-                                <option style="color:yellowgreen">Mexico</option>
-                                <option style="color:purple">japan</option>
-                                <option style="color:peru">China</option>
-                                <option style="color:darkred">Russia</option>
-                            </select>
-                            <span>*</span>
-                        </div>
-                        <div class="organize">
-                            <label>Contact me by:</label>
-                            <div id="radios">
-                                <label><input type="radio" name="contact" id="text"
-                                    value="text" checked>Text</label>
-                                <label><input type="radio" name="contact" id="email"
-                                    value="email">Email</label>
-                                <label><input type="radio" name="contact" id="mobile"
-                                    value="mobile">Cell</label>
-                                <label><input type="radio" name="contact" id="none"
-                                    value="none">Do not contact</label>
-                                </div>
-                        </div>
-                        <div class="organize">
-                                <label>Terms of Service:</label>
-                                <div id="chkBox">
-                                <label><input type="checkbox" name="terms" id="terms"
-                                    value="yes">I accept<span>&#160;&#160;*</span></label>
+
+                <!--column left registration-->
+                <div class="alignFix">
+                    <div class="popup" id="popup">
+                        <h1>Register for an Account</h1>
+                        <form>
+                            <div>
+                                <label for="name">First Name:</label>
+                                <input type="text" name="name" id="firstName">
+                                <span>*</span>
                             </div>
-                        </div>
-                        <div id="textBox">
-                            <label for="comments">Comments:</label>
-                            <textarea name="comments" id="comments" row="5" cols="40"></textarea>
-                            <span>*</span>
-                        </div>
-                        <div>
-                            <label>&nbsp;</label>
-                            <input type="button" class="regButton" id="register" value="Register">
-                            <input type="button" class="regButton" id="reset_form" value="Reset">
-                        </div>
-            
-                    </form>
+                            <div>
+                                <label for="email">E-Mail:</label>
+                                <input type="text" name="email" id="email">
+                                <span>*</span>
+                            </div>
+                            <div>
+                                <label for="phone">Mobile Phone:</label>
+                                <input type="text" name="phone" id="phone">
+                                <span>*</span>
+                            </div>
+                            <div>
+                                <label for="country">Country:</label>
+                                <select name="country" id="country">
+                                    <option value="">Select a country</option>
+                                    <option style="color:red">USA</option>
+                                    <option style="color:green">Canada</option>
+                                    <option style="color:yellowgreen">Mexico</option>
+                                    <option style="color:purple">japan</option>
+                                    <option style="color:peru">China</option>
+                                    <option style="color:darkred">Russia</option>
+                                </select>
+                                <span>*</span>
+                            </div>
+                            <div class="organize">
+                                <label>Contact me by:</label>
+                                <div id="radios">
+                                    <label><input type="radio" name="contact" id="text"
+                                        value="text" checked>Text</label>
+                                    <label><input type="radio" name="contact" id="email"
+                                        value="email">Email</label>
+                                    <label><input type="radio" name="contact" id="mobile"
+                                        value="mobile">Cell</label>
+                                    <label><input type="radio" name="contact" id="none"
+                                        value="none">Do not contact</label>
+                                    </div>
+                            </div>
+                            <div class="organize">
+                                    <label>Terms of Service:</label>
+                                    <div id="chkBox">
+                                    <label><input type="checkbox" name="terms" id="terms"
+                                        value="yes">I accept<span>&#160;&#160;*</span></label>
+                                </div>
+                            </div>
+                            <div id="textBox">
+                                <label for="comments">Comments:</label>
+                                <textarea name="comments" id="comments" row="5" cols="40"></textarea>
+                                <span>*</span>
+                            </div>
+                            <div>
+                                <label>&nbsp;</label>
+                                <input type="button" class="regButton" id="register" value="Register">
+                                <input type="button" class="regButton" id="reset_form" value="Reset">
+                            </div>
+                
+                        </form>
+                    </div>
                 </div>
-            
+
                 <div class="confirmed">
                     <div id="wmBannerHolder">
                         <img id="wmBannerReg" src="images\wmBanner.png" alt="A grungy text displaying western mall">
@@ -135,7 +144,7 @@
                             <h1>Thanks for registering with us!</h1>
                             <p>You should get a confirmation email shortly.</p>
                             <label>&nbsp;</label>
-                            <input type="button" id="close_form" value="Close">
+                            <input type="button" id="homeButton" value="Home">
                         </div>
                     </div>
                 </div>

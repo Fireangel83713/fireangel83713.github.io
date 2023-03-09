@@ -19,11 +19,8 @@
         <script type="text/javascript" src="js/jqueryui/jquery-ui.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>  
         <script type="text/javascript" src="js/shop.js"></script>    
-        <script
-        defer
-        type="module"
-        src="https://cdn.jsdelivr.net/npm/@vime/core@^5/dist/vime/vime.esm.js"
-      ></script>
+        <script defer type="module" src="https://cdn.jsdelivr.net/npm/@vime/core@^5/dist/vime/vime.esm.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
         <body>
         <div class="shopWrapper">
             <header class="fullHeader">
@@ -41,6 +38,9 @@
             <main class="shopMain">
             <aside class="shopLeft">
             <!-- Left sidebar -->
+            <div id="userWelcome">
+              <label id="user"></label>
+            </div>
             <fieldset>
                 <label for="pages">Navigate to:</label>
                 <select id="pages">
@@ -53,6 +53,7 @@
                   <option value="register.html">Register - Create An Account</option>
                 </select>
             </fieldset>
+            <div id="countdown"></div>
             <h2 id="advertHead">On Sale Now!</h2>
             <div class="my-slider">
                 <div class="item"><img src="images\tinHead.jpg" alt="little brown and gold robot">/></div>
@@ -69,7 +70,7 @@
             </aside>
     
             <!-- Main content -->
-            <article class="shopMiddle">
+            <article class="shopMiddlePaProduct">
                 <div class="paShop">
                     <div class="productDescription">
                       <h1><b>TinHead™</b></h1>
