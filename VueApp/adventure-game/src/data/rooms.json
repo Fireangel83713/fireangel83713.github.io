@@ -1,0 +1,79 @@
+[
+    {
+        "id": "WelcomeScene",
+        "description": "Welcome to a choose your own adventure proof of concept in vue.",
+        "image": "Choose.jpg",
+        "choices": [
+          { "text": "Begin your journey", "nextScene": "DarkForest1" }
+        ],
+        "possibleItems": []
+      },
+      {
+      "id": "DarkForest1",
+      "description": "You find yourself in a dark forest. You can hear distant footsteps.",
+      "image": "DarkForest.jpg",
+      "choices": [
+        { "text": "Follow the footsteps", "nextScene": "DarkForest2" },
+        { "text": "Stay where you are", "nextScene": "Attack1" }
+      ],
+      "possibleItems": []
+    },
+    {
+      "id": "DarkForest2",
+      "description": "You make your way deeper into the dark forest and see a dark figure crouched down in some bushes, watching a lone individual in a clearing, packing up a camp.",
+      "image": "WatcherInWoods.jpg",
+      "choices": [
+        { "text": "Approach Figure", "nextScene": "Elf1" },
+        { "text": "Approach Lone Individual", "nextScene": "Attack2" },
+        { "text": "Sneak by both of them", "nextScene": "DarkForest3" }
+      ],
+      "possibleItems": []
+    },
+    {
+        "id": "Attack1",
+        "description": "You stay where you are and immediately regret it as a dark shape uncoils itself froma nearby tree trunk and coalesces into the form of an extremely large snake with wings. Being weaponless, you are quickly defeated and digested. \nYour adventure is at an end.",
+        "image": "WingedSerpent.jpg",
+        "choices": [
+          { "text": "The end", "nextScene": "WelcomeScene" }
+        ],
+        "possibleItems": []
+      },
+      {
+        "id": "Elf1",
+        "description": "Making your way quietly to stand behind the dark figure, you see it is very lithe and you distinctly see the points of each ear sticking out of a mein of long, silky dark hair. Stepping on a twig, it cracks. The elf spins to face you, bow drawn.",
+        "image": "Elf.jpg",
+        "choices": [
+          { "text": "To be continued...", "nextScene": "ToBeContinued" }
+        ],
+        "possibleItems": []
+      },
+      {
+        "id": "DarkForest3",
+        "description": "Exercising extreme caution, you tiptoe past the scene unfolding and continue deeper into the woods.",
+        "image": "DeeperWoods.jpg",
+        "choices": [
+          { "text": "To be continued...", "nextScene": "ToBeContinued" }
+        ],
+        "possibleItems": []
+      },
+      {
+        "id": "Attack2",
+        "image": "ZombieWarrior.jpg",
+        "description": "Running into the clearing to warn the lone individual, you quickly realize your mistake. The zombie warrior quickly draws his swords and ends you with two quick slashes of his broadsword. \nYour adventure is at an end.",
+        "choices": [
+          { "text": "The end", "nextScene": "WelcomeScene" }
+        ],
+        "possibleItems": []
+      },
+      {
+        "id": "ToBeContinued",
+        "image": "ToBeContinued.jpg",
+        "description": "This is the end of the proof of concept. Stay tuned for more adventure!",
+        "choices": [
+          { "text": "The end", "nextScene": "WelcomeScene" }
+        ],
+        "possibleItems": []
+      }
+    
+  ]
+  
